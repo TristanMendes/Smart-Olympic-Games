@@ -1,7 +1,7 @@
 #include "etudiant.h"
 
 
-//tutoriel Qt C++;
+// mendes tutoriel;
 
 etudiant::etudiant()
 {
