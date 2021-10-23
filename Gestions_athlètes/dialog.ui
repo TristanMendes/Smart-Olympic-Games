@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>30</y>
+     <y>0</y>
      <width>751</width>
-     <height>411</height>
+     <height>441</height>
     </rect>
    </property>
    <property name="font">
@@ -49,7 +49,7 @@
        <x>0</x>
        <y>0</y>
        <width>731</width>
-       <height>361</height>
+       <height>411</height>
       </rect>
      </property>
      <property name="tabPosition">
@@ -59,7 +59,7 @@
       <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
@@ -519,6 +519,21 @@ border-style:outset;
 border-width: 2px;
 border-radius: 10px</string>
        </property>
+       <item>
+        <property name="text">
+         <string>Masculin </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Feminin </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>autres</string>
+        </property>
+       </item>
       </widget>
       <widget class="QComboBox" name="comboBox_age_modifier">
        <property name="geometry">
@@ -535,6 +550,11 @@ border-style:outset;
 border-width: 2px;
 border-radius: 10px</string>
        </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
       </widget>
      </widget>
      <widget class="QWidget" name="tab_4">
@@ -588,7 +608,7 @@ border-radius: 7px</string>
          <x>10</x>
          <y>20</y>
          <width>351</width>
-         <height>311</height>
+         <height>351</height>
         </rect>
        </property>
       </widget>
