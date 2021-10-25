@@ -7,13 +7,13 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    Connexion c;
+    Connexion c;// une seule instance de la classe connexion
     bool test= c.createconnect();
-    if(test)
+    if(test)//si la connexion est etablie
     {
     w.show();
-    QMessageBox::critical(nullptr, QObject::tr("database is open"),QObject::tr("Connection Reussie.\n""Click Cancle to exit."),QMessageBox::Cancel);
-    }else
+    QMessageBox::information(nullptr, QObject::tr("database is open"),QObject::tr("Connection Reussie.\n""Click Cancle to exit."),QMessageBox::Cancel);
+    }else//si la connexion a échoué
         QMessageBox::critical(nullptr, QObject::tr("database is open"),QObject::tr("Connection Echoué.\n""Click Cancle to exit."),QMessageBox::Cancel);
     return a.exec();
 }

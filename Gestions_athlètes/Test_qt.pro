@@ -18,12 +18,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     athletes.cpp \
     connexion.cpp \
+    dialog.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     athletes.h \
     connexion.h \
+    dialog.h \
     mainwindow.h
 
 FORMS += \
