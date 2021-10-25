@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
+      <y>0</y>
       <width>811</width>
-      <height>561</height>
+      <height>581</height>
      </rect>
     </property>
     <property name="font">
@@ -31,10 +31,11 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);
+</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -63,7 +64,7 @@
       <property name="geometry">
        <rect>
         <x>550</x>
-        <y>360</y>
+        <y>340</y>
         <width>91</width>
         <height>20</height>
        </rect>
@@ -92,7 +93,7 @@
       <property name="geometry">
        <rect>
         <x>670</x>
-        <y>350</y>
+        <y>340</y>
         <width>113</width>
         <height>31</height>
        </rect>
@@ -101,8 +102,8 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>450</y>
+        <x>570</x>
+        <y>440</y>
         <width>151</width>
         <height>28</height>
        </rect>
@@ -136,11 +137,15 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>450</x>
         <y>0</y>
-        <width>331</width>
-        <height>151</height>
+        <width>351</width>
+        <height>161</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(184, 255, 125);
+background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string/>
@@ -153,7 +158,7 @@
       <property name="geometry">
        <rect>
         <x>560</x>
-        <y>400</y>
+        <y>390</y>
         <width>187</width>
         <height>41</height>
        </rect>
@@ -196,37 +201,21 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>10</y>
-        <width>791</width>
-        <height>521</height>
+        <y>0</y>
+        <width>801</width>
+        <height>531</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(142, 255, 140);</string>
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
         <string>Ajout stades</string>
        </attribute>
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>171</width>
-          <height>451</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../../Downloads/3.png</pixmap>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_9">
         <property name="geometry">
          <rect>
@@ -250,7 +239,7 @@
         <property name="geometry">
          <rect>
           <x>230</x>
-          <y>100</y>
+          <y>110</y>
           <width>56</width>
           <height>16</height>
          </rect>
@@ -263,25 +252,6 @@
         </property>
         <property name="text">
          <string>Adresse</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_17">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>230</y>
-          <width>56</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Surface</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_18">
@@ -306,7 +276,7 @@
        <widget class="QLabel" name="label_19">
         <property name="geometry">
          <rect>
-          <x>230</x>
+          <x>200</x>
           <y>350</y>
           <width>131</width>
           <height>16</height>
@@ -380,19 +350,6 @@
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_13">
-        <property name="geometry">
-         <rect>
-          <x>420</x>
-          <y>220</y>
-          <width>241</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="lineEdit_14">
         <property name="geometry">
          <rect>
@@ -448,9 +405,9 @@
        <widget class="QLabel" name="label_23">
         <property name="geometry">
          <rect>
-          <x>250</x>
+          <x>240</x>
           <y>310</y>
-          <width>111</width>
+          <width>71</width>
           <height>16</height>
          </rect>
         </property>
@@ -483,6 +440,54 @@
          <string>ID</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>0</y>
+          <width>611</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-5</y>
+          <width>171</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/3.png</pixmap>
+        </property>
+       </widget>
+       <zorder>label_29</zorder>
+       <zorder>label_9</zorder>
+       <zorder>label_10</zorder>
+       <zorder>label_18</zorder>
+       <zorder>label_19</zorder>
+       <zorder>label_20</zorder>
+       <zorder>lineEdit_8</zorder>
+       <zorder>lineEdit_9</zorder>
+       <zorder>lineEdit_10</zorder>
+       <zorder>lineEdit_14</zorder>
+       <zorder>lineEdit_15</zorder>
+       <zorder>lineEdit_16</zorder>
+       <zorder>lineEdit_18</zorder>
+       <zorder>label_23</zorder>
+       <zorder>label_26</zorder>
+       <zorder>label_8</zorder>
       </widget>
       <widget class="QWidget" name="tab_9">
        <attribute name="title">
@@ -722,6 +727,34 @@ font: 75 8pt &quot;Arial&quot;;</string>
          <string>OK</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>-15</x>
+          <y>-11</y>
+          <width>801</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
+        </property>
+       </widget>
+       <zorder>label_28</zorder>
+       <zorder>label_12</zorder>
+       <zorder>lineEdit_4</zorder>
+       <zorder>pushButton_9</zorder>
+       <zorder>tableWidget_2</zorder>
+       <zorder>pushButton_4</zorder>
+       <zorder>label_22</zorder>
+       <zorder>lineEdit_21</zorder>
+       <zorder>pushButton_30</zorder>
+       <zorder>pushButton_31</zorder>
+       <zorder>pushButton_32</zorder>
+       <zorder>pushButton_33</zorder>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -882,11 +915,51 @@ font: 75 8pt &quot;Arial&quot;;</string>
          <string>Ajouter</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_27">
+        <property name="geometry">
+         <rect>
+          <x>-5</x>
+          <y>-1</y>
+          <width>791</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
+        </property>
+       </widget>
+       <zorder>label_27</zorder>
+       <zorder>label_24</zorder>
+       <zorder>lineEdit_19</zorder>
+       <zorder>pushButton_28</zorder>
+       <zorder>tableWidget_7</zorder>
+       <zorder>label_25</zorder>
+       <zorder>lineEdit_20</zorder>
+       <zorder>pushButton_29</zorder>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
         <string>Localisation</string>
        </attribute>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>-10</y>
+          <width>801</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_10">
        <attribute name="title">
@@ -895,8 +968,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QTableWidget" name="tableWidget_3">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>60</y>
+          <x>20</x>
+          <y>40</y>
           <width>411</width>
           <height>111</height>
          </rect>
@@ -973,7 +1046,7 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QLabel" name="label_13">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>40</x>
           <y>0</y>
           <width>91</width>
           <height>21</height>
@@ -994,7 +1067,7 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QLineEdit" name="lineEdit_5">
         <property name="geometry">
          <rect>
-          <x>450</x>
+          <x>140</x>
           <y>0</y>
           <width>201</width>
           <height>31</height>
@@ -1007,9 +1080,9 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QLabel" name="label_14">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>280</y>
-          <width>91</width>
+          <x>30</x>
+          <y>210</y>
+          <width>101</width>
           <height>21</height>
          </rect>
         </property>
@@ -1028,8 +1101,8 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QLineEdit" name="lineEdit_6">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>270</y>
+          <x>140</x>
+          <y>200</y>
           <width>201</width>
           <height>41</height>
          </rect>
@@ -1041,8 +1114,8 @@ background-color: rgb(255, 255, 255);</string>
        <widget class="QTableWidget" name="tableWidget_4">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>320</y>
+          <x>20</x>
+          <y>250</y>
           <width>471</width>
           <height>111</height>
          </rect>
@@ -1119,8 +1192,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_20">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>180</y>
+          <x>30</x>
+          <y>160</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1132,8 +1205,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_21">
         <property name="geometry">
          <rect>
-          <x>560</x>
-          <y>180</y>
+          <x>130</x>
+          <y>160</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1145,8 +1218,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_22">
         <property name="geometry">
          <rect>
-          <x>670</x>
-          <y>180</y>
+          <x>240</x>
+          <y>160</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1158,8 +1231,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_23">
         <property name="geometry">
          <rect>
-          <x>580</x>
-          <y>280</y>
+          <x>350</x>
+          <y>210</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1171,8 +1244,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_24">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>430</y>
+          <x>20</x>
+          <y>380</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1184,8 +1257,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_25">
         <property name="geometry">
          <rect>
-          <x>480</x>
-          <y>430</y>
+          <x>120</x>
+          <y>380</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1197,8 +1270,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_26">
         <property name="geometry">
          <rect>
-          <x>630</x>
-          <y>430</y>
+          <x>220</x>
+          <y>380</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1210,7 +1283,7 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_27">
         <property name="geometry">
          <rect>
-          <x>650</x>
+          <x>350</x>
           <y>0</y>
           <width>93</width>
           <height>28</height>
@@ -1220,6 +1293,37 @@ font: 75 8pt &quot;Arial&quot;;</string>
          <string>Ajouter</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>5</y>
+          <width>791</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
+        </property>
+       </widget>
+       <zorder>label_11</zorder>
+       <zorder>tableWidget_3</zorder>
+       <zorder>label_13</zorder>
+       <zorder>lineEdit_5</zorder>
+       <zorder>label_14</zorder>
+       <zorder>lineEdit_6</zorder>
+       <zorder>tableWidget_4</zorder>
+       <zorder>pushButton_20</zorder>
+       <zorder>pushButton_21</zorder>
+       <zorder>pushButton_22</zorder>
+       <zorder>pushButton_23</zorder>
+       <zorder>pushButton_24</zorder>
+       <zorder>pushButton_25</zorder>
+       <zorder>pushButton_26</zorder>
+       <zorder>pushButton_27</zorder>
       </widget>
       <widget class="QWidget" name="tab_8">
        <attribute name="title">
@@ -1249,10 +1353,10 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QLineEdit" name="lineEdit_3">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>0</y>
+          <x>110</x>
+          <y>10</y>
           <width>201</width>
-          <height>41</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1300,10 +1404,10 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QTableWidget" name="tableWidget">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>60</y>
-          <width>451</width>
-          <height>101</height>
+          <x>480</x>
+          <y>0</y>
+          <width>311</width>
+          <height>91</height>
          </rect>
         </property>
         <property name="font">
@@ -1423,7 +1527,7 @@ font: 75 8pt &quot;Arial&quot;;</string>
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>170</y>
+          <y>130</y>
           <width>91</width>
           <height>21</height>
          </rect>
@@ -1443,8 +1547,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QLineEdit" name="lineEdit_7">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>160</y>
+          <x>110</x>
+          <y>130</y>
           <width>201</width>
           <height>31</height>
          </rect>
@@ -1456,8 +1560,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_15">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>160</y>
+          <x>320</x>
+          <y>120</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1481,8 +1585,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_10">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>190</y>
+          <x>320</x>
+          <y>150</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1494,9 +1598,9 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QTableWidget" name="tableWidget_5">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>220</y>
-          <width>451</width>
+          <x>480</x>
+          <y>110</y>
+          <width>311</width>
           <height>101</height>
          </rect>
         </property>
@@ -1572,8 +1676,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QLabel" name="label_16">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>330</y>
+          <x>10</x>
+          <y>270</y>
           <width>91</width>
           <height>21</height>
          </rect>
@@ -1593,8 +1697,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QLineEdit" name="lineEdit_17">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>320</y>
+          <x>110</x>
+          <y>260</y>
           <width>201</width>
           <height>31</height>
          </rect>
@@ -1606,8 +1710,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_16">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>320</y>
+          <x>320</x>
+          <y>250</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1631,8 +1735,8 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_11">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>350</y>
+          <x>320</x>
+          <y>280</y>
           <width>93</width>
           <height>28</height>
          </rect>
@@ -1644,10 +1748,10 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QTableWidget" name="tableWidget_6">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>380</y>
-          <width>451</width>
-          <height>91</height>
+          <x>480</x>
+          <y>230</y>
+          <width>321</width>
+          <height>111</height>
          </rect>
         </property>
         <property name="font">
@@ -1719,6 +1823,41 @@ font: 75 8pt &quot;Arial&quot;;</string>
          </property>
         </column>
        </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>-110</y>
+          <width>831</width>
+          <height>711</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
+        </property>
+       </widget>
+       <zorder>label_5</zorder>
+       <zorder>label_7</zorder>
+       <zorder>lineEdit_3</zorder>
+       <zorder>pushButton_2</zorder>
+       <zorder>pushButton_3</zorder>
+       <zorder>tableWidget</zorder>
+       <zorder>label_21</zorder>
+       <zorder>lineEdit_7</zorder>
+       <zorder>pushButton_15</zorder>
+       <zorder>pushButton_10</zorder>
+       <zorder>tableWidget_5</zorder>
+       <zorder>label_16</zorder>
+       <zorder>lineEdit_17</zorder>
+       <zorder>pushButton_16</zorder>
+       <zorder>pushButton_11</zorder>
+       <zorder>tableWidget_6</zorder>
       </widget>
      </widget>
     </widget>
@@ -1735,6 +1874,18 @@ font: 75 8pt &quot;Arial&quot;;</string>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+background-color: rgb(8, 6, 6);
+background-color: rgb(255, 255, 255);
+background-color: rgb(255, 34, 19);</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>4</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
  </widget>
  <resources/>
  <connections/>
