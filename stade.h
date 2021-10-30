@@ -21,7 +21,7 @@ public:
      void setnom(QString);
      void setadresse(QString);
      void setspecialite(QString);
-
+     bool ajouter();
 
 private:
  int id,capacite,nbre_evenement  ;

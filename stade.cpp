@@ -1,5 +1,6 @@
 #include "stade.h"
-
+#include <QSqlQuery>
+#include <QDebug>
 Stade::Stade()
 {
 id=0; capacite=0; nbre_evenement=0 ; nom=""; adresse="";specialite="";dimension=0.0f ;
@@ -21,3 +22,16 @@ id=0; capacite=0; nbre_evenement=0 ; nom=""; adresse="";specialite="";dimension=
  void Stade::setnom(QString nom) {this->nom=nom;}
  void Stade::setadresse(QString adresse) {this->adresse=adresse;}
  void Stade::setspecialite(QString specialite) {this->specialite=specialite;}
+ bool Stade::ajouter()
+ {
+     QSqlQuery query;
+     QString id_string=QString::number(id);
+     QString capacite_string=QString::number(capacite);
+     QString nbre_evenement_string=QString::number(nbre_evenement);
+           query.prepare("INSERT INTO stade (id,capacite,nbre_evenement,dimension,nom,adresse,specialite) "
+                         "VALUES (:id, :forename, :surname)");
+           query.bindValue(":id",id_string);
+           query.bindValue(":forename",capacite_string);
+           query.bindValue(":surname", nbre_evenement_string);
+           return query.exec();
+ }
