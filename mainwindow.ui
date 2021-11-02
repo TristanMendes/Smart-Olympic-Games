@@ -557,84 +557,6 @@ background-color: rgb(255, 255, 255);</string>
          <string>Rechercher</string>
         </property>
        </widget>
-       <widget class="QTableWidget" name="tableWidget_2">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>150</y>
-          <width>411</width>
-          <height>221</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>8</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 75 8pt &quot;Arial&quot;;</string>
-        </property>
-        <column>
-         <property name="text">
-          <string>ID</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nom</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Capacité max</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nbr event</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Afflu record</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-       </widget>
        <widget class="QPushButton" name="pushButton_4">
         <property name="geometry">
          <rect>
@@ -752,7 +674,6 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <zorder>label_12</zorder>
        <zorder>lineEdit_4</zorder>
        <zorder>pushButton_9</zorder>
-       <zorder>tableWidget_2</zorder>
        <zorder>pushButton_4</zorder>
        <zorder>label_22</zorder>
        <zorder>lineEdit_21</zorder>
@@ -1220,19 +1141,6 @@ font: 75 8pt &quot;Arial&quot;;</string>
          <string>Supprimer</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_22">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>160</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pushButton_23">
         <property name="geometry">
          <rect>
@@ -1270,19 +1178,6 @@ font: 75 8pt &quot;Arial&quot;;</string>
         </property>
         <property name="text">
          <string>Supprimer</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_26">
-        <property name="geometry">
-         <rect>
-          <x>220</x>
-          <y>380</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_27">
@@ -1323,16 +1218,14 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <zorder>tableWidget_4</zorder>
        <zorder>pushButton_20</zorder>
        <zorder>pushButton_21</zorder>
-       <zorder>pushButton_22</zorder>
        <zorder>pushButton_23</zorder>
        <zorder>pushButton_24</zorder>
        <zorder>pushButton_25</zorder>
-       <zorder>pushButton_26</zorder>
        <zorder>pushButton_27</zorder>
       </widget>
       <widget class="QWidget" name="tab_8">
        <attribute name="title">
-        <string>Affichage</string>
+        <string>Afficher stade</string>
        </attribute>
        <widget class="QLabel" name="label_7">
         <property name="geometry">
@@ -1360,7 +1253,7 @@ font: 75 8pt &quot;Arial&quot;;</string>
          <rect>
           <x>110</x>
           <y>10</y>
-          <width>201</width>
+          <width>111</width>
           <height>31</height>
          </rect>
         </property>
@@ -1371,7 +1264,7 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_2">
         <property name="geometry">
          <rect>
-          <x>340</x>
+          <x>220</x>
           <y>0</y>
           <width>93</width>
           <height>28</height>
@@ -1396,7 +1289,7 @@ font: 75 8pt &quot;Arial&quot;;</string>
        <widget class="QPushButton" name="pushButton_3">
         <property name="geometry">
          <rect>
-          <x>340</x>
+          <x>220</x>
           <y>30</y>
           <width>93</width>
           <height>28</height>
@@ -1405,428 +1298,6 @@ font: 75 8pt &quot;Arial&quot;;</string>
         <property name="text">
          <string>Trier</string>
         </property>
-       </widget>
-       <widget class="QTableWidget" name="tableWidget">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>0</y>
-          <width>311</width>
-          <height>91</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>8</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 75 8pt &quot;Arial&quot;;</string>
-        </property>
-        <column>
-         <property name="text">
-          <string>ID stade</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nom</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Adresse</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Tel</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Mail</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Capacité</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Surface</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Dimension</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Spécialité</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-       </widget>
-       <widget class="QLabel" name="label_21">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>130</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Gill Sans MT</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>ID Agent</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>130</y>
-          <width>201</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_15">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>120</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>MS Shell Dlg 2</family>
-          <pointsize>8</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Rechercher</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_10">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>150</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Trier</string>
-        </property>
-       </widget>
-       <widget class="QTableWidget" name="tableWidget_5">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>110</y>
-          <width>311</width>
-          <height>101</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>8</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 75 8pt &quot;Arial&quot;;</string>
-        </property>
-        <column>
-         <property name="text">
-          <string>ID Agent</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nom</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Prenom</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Grade</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Role</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-       </widget>
-       <widget class="QLabel" name="label_16">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>270</y>
-          <width>91</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Gill Sans MT</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>ID Fan</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_17">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>260</y>
-          <width>201</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_16">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>250</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>MS Shell Dlg 2</family>
-          <pointsize>8</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Rechercher</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_11">
-        <property name="geometry">
-         <rect>
-          <x>320</x>
-          <y>280</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Trier</string>
-        </property>
-       </widget>
-       <widget class="QTableWidget" name="tableWidget_6">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>230</y>
-          <width>321</width>
-          <height>111</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>8</pointsize>
-          <weight>9</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-font: 75 8pt &quot;Arial&quot;;</string>
-        </property>
-        <column>
-         <property name="text">
-          <string>ID Fan</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nom</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Prenom</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nationalité</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Situation</string>
-         </property>
-         <property name="font">
-          <font>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-        </column>
        </widget>
        <widget class="QLabel" name="label_5">
         <property name="geometry">
@@ -1847,22 +1318,22 @@ font: 75 8pt &quot;Arial&quot;;</string>
          <pixmap>../../Downloads/248390709_430927875216618_5678927353494303831_n.jpg</pixmap>
         </property>
        </widget>
+       <widget class="QTableView" name="tab_stade">
+        <property name="geometry">
+         <rect>
+          <x>335</x>
+          <y>11</y>
+          <width>451</width>
+          <height>441</height>
+         </rect>
+        </property>
+       </widget>
        <zorder>label_5</zorder>
        <zorder>label_7</zorder>
        <zorder>lineEdit_3</zorder>
        <zorder>pushButton_2</zorder>
        <zorder>pushButton_3</zorder>
-       <zorder>tableWidget</zorder>
-       <zorder>label_21</zorder>
-       <zorder>lineEdit_7</zorder>
-       <zorder>pushButton_15</zorder>
-       <zorder>pushButton_10</zorder>
-       <zorder>tableWidget_5</zorder>
-       <zorder>label_16</zorder>
-       <zorder>lineEdit_17</zorder>
-       <zorder>pushButton_16</zorder>
-       <zorder>pushButton_11</zorder>
-       <zorder>tableWidget_6</zorder>
+       <zorder>tab_stade</zorder>
       </widget>
      </widget>
     </widget>

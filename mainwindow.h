@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "stade.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -23,5 +23,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Stade S ;
 };
 #endif // MAINWINDOW_H

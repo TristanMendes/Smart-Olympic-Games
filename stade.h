@@ -1,6 +1,7 @@
 #ifndef STADE_H
 #define STADE_H
 
+#include <QSqlQueryModel>
 #include <QString>
 class Stade
 {
@@ -22,6 +23,7 @@ public:
      void setadresse(QString);
      void setspecialite(QString);
      bool ajouter();
+     QSqlQueryModel* afficher();
 
 private:
  int id,capacite,nbre_evenement  ;

@@ -6,7 +6,6 @@
 
 class Connexion
 {
-private:
     QSqlDatabase db ;
 public:
     Connexion();

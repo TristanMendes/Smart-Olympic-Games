@@ -28,10 +28,41 @@ id=0; capacite=0; nbre_evenement=0 ; nom=""; adresse="";specialite="";dimension=
      QString id_string=QString::number(id);
      QString capacite_string=QString::number(capacite);
      QString nbre_evenement_string=QString::number(nbre_evenement);
+     QString dimension_string=QString::number(dimension);
+
            query.prepare("INSERT INTO stade (id,capacite,nbre_evenement,dimension,nom,adresse,specialite) "
-                         "VALUES (:id, :forename, :surname)");
+                         "VALUES (:id, :capacite, :nbre_evenement, :dimension, :nom, :adresse, :specialite)");
            query.bindValue(":id",id_string);
-           query.bindValue(":forename",capacite_string);
-           query.bindValue(":surname", nbre_evenement_string);
+           query.bindValue(":capacite",capacite_string);
+           query.bindValue(":nbre_evenement", nbre_evenement_string);
+           query.bindValue(":dimension",dimension_string);
+           query.bindValue(":nom",nom);
+           query.bindValue(":adresse",adresse);
+           query.bindValue(":specialite",specialite);
            return query.exec();
+
+
  }
+ QSqlQueryModel * Stade::afficher()
+ {
+     QSqlQueryModel * model= new QSqlQueryModel();
+ model->setQuery("SELECT * from Stade");
+ model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+ model->setHeaderData(1, Qt::Horizontal, QObject::tr("capacite"));
+ model->setHeaderData(2, Qt::Horizontal, QObject::tr("nbre_evenement"));
+ model->setHeaderData(3, Qt::Horizontal, QObject::tr("dimension"));
+ model->setHeaderData(4, Qt::Horizontal, QObject::tr("nom"));
+ model->setHeaderData(5, Qt::Horizontal, QObject::tr("adresse"));
+ model->setHeaderData(6, Qt::Horizontal, QObject::tr("specialite"));
+
+
+ return model;
+ }
+
+
+
+
+
+
+
+
