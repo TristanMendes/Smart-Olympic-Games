@@ -7,11 +7,11 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
     connection C;
 
     bool test = C.createConnect();
 
+    MainWindow w;
     if(test)
     {
         w.show();
