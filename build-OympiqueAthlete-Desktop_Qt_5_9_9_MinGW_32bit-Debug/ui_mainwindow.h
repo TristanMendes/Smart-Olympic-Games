@@ -62,6 +62,10 @@ public:
     QLabel *label_31;
     QComboBox *comboBox_sexe_3;
     QPushButton *boutton_ajouterath;
+    QLabel *label_5;
+    QPushButton *pushButton_Modifierath;
+    QLabel *label_nom_test;
+    QLabel *label_prenom_test;
     QWidget *tab_12;
     QGroupBox *groupBox_2;
     QLabel *label_42;
@@ -69,9 +73,10 @@ public:
     QPushButton *boutton_supprimerath;
     QComboBox *comboBox_trierath;
     QLabel *label_32;
-    QComboBox *comboBox_rechercherath;
-    QLabel *label_33;
     QTableView *table_athletes_2;
+    QLineEdit *lineEdit_rechercher;
+    QPushButton *bouton_rechercherath;
+    QLabel *label_6;
     QWidget *tab_13;
     QLineEdit *lineEdit_ID_mo;
     QLabel *label_34;
@@ -89,7 +94,6 @@ public:
     QLineEdit *lineEdit_specialite_4;
     QLineEdit *lineEdit_mail_4;
     QLabel *label_41;
-    QPushButton *pushButton_5;
     QWidget *tab_14;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -308,12 +312,54 @@ public:
 "border-width: 2px;\n"
 "border-radius: 10px\n"
 ""));
+        label_5 = new QLabel(tab_11);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(0, -5, 771, 441));
+        label_5->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/mondes21.jpg")));
+        pushButton_Modifierath = new QPushButton(tab_11);
+        pushButton_Modifierath->setObjectName(QStringLiteral("pushButton_Modifierath"));
+        pushButton_Modifierath->setGeometry(QRect(390, 330, 111, 31));
+        pushButton_Modifierath->setStyleSheet(QLatin1String("color:black;\n"
+"border-color: rgb(222, 255, 52);\n"
+"background-color: rgb(255, 255, 255);\n"
+"font: 75 16pt \"MS Shell Dlg 2\";\n"
+"border-style:outset;\n"
+"border-width: 2px;\n"
+"border-radius: 10px\n"
+""));
+        label_nom_test = new QLabel(tab_11);
+        label_nom_test->setObjectName(QStringLiteral("label_nom_test"));
+        label_nom_test->setGeometry(QRect(100, 240, 201, 20));
+        label_prenom_test = new QLabel(tab_11);
+        label_prenom_test->setObjectName(QStringLiteral("label_prenom_test"));
+        label_prenom_test->setGeometry(QRect(150, 320, 121, 16));
         tabWidget_2->addTab(tab_11, QString());
+        label_5->raise();
+        lineEdit_ID_3->raise();
+        lineEdit_Nom_3->raise();
+        lineEdit_Prenom_3->raise();
+        lineEdit_Age_3->raise();
+        lineEdit_nationalite_3->raise();
+        lineEdit_specialite_3->raise();
+        lineEdit_mail_3->raise();
+        label_24->raise();
+        label_25->raise();
+        label_26->raise();
+        label_27->raise();
+        label_28->raise();
+        label_29->raise();
+        label_30->raise();
+        label_31->raise();
+        comboBox_sexe_3->raise();
+        boutton_ajouterath->raise();
+        pushButton_Modifierath->raise();
+        label_nom_test->raise();
+        label_prenom_test->raise();
         tab_12 = new QWidget();
         tab_12->setObjectName(QStringLiteral("tab_12"));
         groupBox_2 = new QGroupBox(tab_12);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(-10, 10, 781, 361));
+        groupBox_2->setGeometry(QRect(0, 30, 791, 411));
         label_42 = new QLabel(groupBox_2);
         label_42->setObjectName(QStringLiteral("label_42"));
         label_42->setGeometry(QRect(30, 30, 151, 20));
@@ -322,7 +368,8 @@ public:
         lineEdit_supprimerath = new QLineEdit(groupBox_2);
         lineEdit_supprimerath->setObjectName(QStringLiteral("lineEdit_supprimerath"));
         lineEdit_supprimerath->setGeometry(QRect(220, 30, 261, 31));
-        lineEdit_supprimerath->setStyleSheet(QLatin1String("color:black;\n"
+        lineEdit_supprimerath->setStyleSheet(QLatin1String("\n"
+"color:black;\n"
 "border-style:outset;\n"
 "border-width: 2px;\n"
 "border-radius: 10px"));
@@ -339,7 +386,7 @@ public:
 ""));
         comboBox_trierath = new QComboBox(groupBox_2);
         comboBox_trierath->setObjectName(QStringLiteral("comboBox_trierath"));
-        comboBox_trierath->setGeometry(QRect(90, 120, 131, 22));
+        comboBox_trierath->setGeometry(QRect(130, 91, 131, 31));
         comboBox_trierath->setStyleSheet(QLatin1String("color:black;\n"
 "font: 75 14pt \"MS Shell Dlg 2\";\n"
 "border-style:outset;\n"
@@ -347,25 +394,37 @@ public:
 "border-radius: 10px"));
         label_32 = new QLabel(groupBox_2);
         label_32->setObjectName(QStringLiteral("label_32"));
-        label_32->setGeometry(QRect(20, 120, 81, 20));
+        label_32->setGeometry(QRect(30, 100, 81, 20));
         label_32->setStyleSheet(QLatin1String("font: 75 10pt \"MS Shell Dlg 2\";\n"
 "font: 18pt \"MS Shell Dlg 2\";"));
-        comboBox_rechercherath = new QComboBox(groupBox_2);
-        comboBox_rechercherath->setObjectName(QStringLiteral("comboBox_rechercherath"));
-        comboBox_rechercherath->setGeometry(QRect(390, 120, 231, 22));
-        comboBox_rechercherath->setStyleSheet(QLatin1String("color:black;\n"
-"font: 75 14pt \"MS Shell Dlg 2\";\n"
+        table_athletes_2 = new QTableView(groupBox_2);
+        table_athletes_2->setObjectName(QStringLiteral("table_athletes_2"));
+        table_athletes_2->setGeometry(QRect(0, 160, 751, 251));
+        lineEdit_rechercher = new QLineEdit(groupBox_2);
+        lineEdit_rechercher->setObjectName(QStringLiteral("lineEdit_rechercher"));
+        lineEdit_rechercher->setGeometry(QRect(500, 99, 221, 31));
+        lineEdit_rechercher->setStyleSheet(QLatin1String("color:black;\n"
 "border-style:outset;\n"
 "border-width: 2px;\n"
 "border-radius: 10px"));
-        label_33 = new QLabel(groupBox_2);
-        label_33->setObjectName(QStringLiteral("label_33"));
-        label_33->setGeometry(QRect(270, 120, 81, 20));
-        label_33->setStyleSheet(QStringLiteral("font: 75 12pt \"MS Shell Dlg 2\";"));
-        table_athletes_2 = new QTableView(groupBox_2);
-        table_athletes_2->setObjectName(QStringLiteral("table_athletes_2"));
-        table_athletes_2->setGeometry(QRect(20, 150, 741, 201));
+        bouton_rechercherath = new QPushButton(groupBox_2);
+        bouton_rechercherath->setObjectName(QStringLiteral("bouton_rechercherath"));
+        bouton_rechercherath->setGeometry(QRect(344, 92, 131, 41));
+        bouton_rechercherath->setStyleSheet(QLatin1String("color:black;\n"
+"border-color: rgb(222, 255, 52);\n"
+"background-color: rgb(255, 255, 255);\n"
+"font: 75 16pt \"MS Shell Dlg 2\";\n"
+"border-style:outset;\n"
+"border-width: 2px;\n"
+"border-radius: 10px\n"
+""));
+        label_6 = new QLabel(tab_12);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(-20, -30, 791, 501));
+        label_6->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/mondes21.jpg")));
         tabWidget_2->addTab(tab_12, QString());
+        label_6->raise();
+        groupBox_2->raise();
         tab_13 = new QWidget();
         tab_13->setObjectName(QStringLiteral("tab_13"));
         lineEdit_ID_mo = new QLineEdit(tab_13);
@@ -450,17 +509,6 @@ public:
         label_41 = new QLabel(tab_13);
         label_41->setObjectName(QStringLiteral("label_41"));
         label_41->setGeometry(QRect(396, 250, 61, 20));
-        pushButton_5 = new QPushButton(tab_13);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(490, 320, 111, 31));
-        pushButton_5->setStyleSheet(QLatin1String("color:black;\n"
-"border-color: rgb(222, 255, 52);\n"
-"background-color: rgb(255, 255, 255);\n"
-"font: 75 16pt \"MS Shell Dlg 2\";\n"
-"border-style:outset;\n"
-"border-width: 2px;\n"
-"border-radius: 10px\n"
-""));
         tabWidget_2->addTab(tab_13, QString());
         tab_14 = new QWidget();
         tab_14->setObjectName(QStringLiteral("tab_14"));
@@ -511,6 +559,10 @@ public:
          << QApplication::translate("MainWindow", "Autres", Q_NULLPTR)
         );
         boutton_ajouterath->setText(QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
+        label_5->setText(QString());
+        pushButton_Modifierath->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
+        label_nom_test->setText(QString());
+        label_prenom_test->setText(QString());
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_11), QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "AFFICHAGE-SUPPRESSION", Q_NULLPTR));
         label_42->setText(QApplication::translate("MainWindow", "Identifiant", Q_NULLPTR));
@@ -518,19 +570,13 @@ public:
         comboBox_trierath->clear();
         comboBox_trierath->insertItems(0, QStringList()
          << QString()
-         << QApplication::translate("MainWindow", "Identifiant", Q_NULLPTR)
          << QApplication::translate("MainWindow", "age", Q_NULLPTR)
          << QApplication::translate("MainWindow", "nationalite", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "Nom", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "specialite", Q_NULLPTR)
         );
         label_32->setText(QApplication::translate("MainWindow", "Trier", Q_NULLPTR));
-        comboBox_rechercherath->clear();
-        comboBox_rechercherath->insertItems(0, QStringList()
-         << QString()
-         << QApplication::translate("MainWindow", "Nom", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "Specialite", Q_NULLPTR)
-        );
-        label_33->setText(QApplication::translate("MainWindow", "rechercher", Q_NULLPTR));
+        bouton_rechercherath->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
+        label_6->setText(QString());
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_12), QApplication::translate("MainWindow", "Afficher", Q_NULLPTR));
         lineEdit_ID_mo->setText(QString());
         label_34->setText(QApplication::translate("MainWindow", "Nom", Q_NULLPTR));
@@ -548,7 +594,6 @@ public:
         label_39->setText(QApplication::translate("MainWindow", "sexe", Q_NULLPTR));
         label_40->setText(QApplication::translate("MainWindow", "specialite", Q_NULLPTR));
         label_41->setText(QApplication::translate("MainWindow", "mail", Q_NULLPTR));
-        pushButton_5->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_13), QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_14), QApplication::translate("MainWindow", "Supprimer", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_10), QApplication::translate("MainWindow", "Gestion des Athl\303\250tes", Q_NULLPTR));

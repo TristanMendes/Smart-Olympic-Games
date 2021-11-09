@@ -21,8 +21,18 @@ private slots:
 
     void on_boutton_supprimerath_clicked();
 
+    void on_pushButton_Modifierath_clicked();
+
+    void on_table_athletes_2_activated(const QModelIndex &index);
+
+    void on_bouton_rechercherath_clicked();
+
+
+    void on_comboBox_trierath_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     athletesOP A;
+
 };
 #endif // MAINWINDOW_H

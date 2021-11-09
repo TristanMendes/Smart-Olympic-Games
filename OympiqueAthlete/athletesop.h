@@ -35,8 +35,16 @@ public:
     void set_age(int a){this->age=a;}
 
     bool ajouter();
+    bool Nomtest(QString nom);
+   // bool Prenomtest(QString prenom);
     bool supprimer(int);
     QSqlQueryModel* afficher();
+    bool modifier(int);
+    QSqlQueryModel* recherche(int id);
+    QSqlQueryModel* rechercheNom(QString nom);
+    QSqlQueryModel* trier_age();
+    QSqlQueryModel* trier_nationalite();
+    QSqlQueryModel* trier_specialite();
 
 };
 

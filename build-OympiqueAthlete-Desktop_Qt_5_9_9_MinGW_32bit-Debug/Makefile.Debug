@@ -318,7 +318,7 @@ debug/athletesop.o: ../OympiqueAthlete/athletesop.cpp ../OympiqueAthlete/athlete
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QtDebug \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QDebug \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\athletesop.o ..\OympiqueAthlete\athletesop.cpp
 
@@ -607,7 +607,10 @@ debug/mainwindow.o: ../OympiqueAthlete/mainwindow.cpp ../OympiqueAthlete/mainwin
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QIntValidator \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregularexpression.h
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\OympiqueAthlete\mainwindow.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 
