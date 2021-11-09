@@ -219,7 +219,7 @@ text-decoration: underline;</string>
         <property name="geometry">
          <rect>
           <x>190</x>
-          <y>90</y>
+          <y>110</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -250,8 +250,8 @@ text-decoration: underline;</string>
        <widget class="QLabel" name="label_15">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>240</y>
+          <x>460</x>
+          <y>60</y>
           <width>141</width>
           <height>20</height>
          </rect>
@@ -266,8 +266,8 @@ text-decoration: underline;</string>
        <widget class="QLabel" name="label_16">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>300</y>
+          <x>460</x>
+          <y>110</y>
           <width>181</width>
           <height>20</height>
          </rect>
@@ -282,8 +282,8 @@ text-decoration: underline;</string>
        <widget class="QLabel" name="label_17">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>370</y>
+          <x>460</x>
+          <y>160</y>
           <width>91</width>
           <height>20</height>
          </rect>
@@ -295,60 +295,63 @@ text-decoration: underline;</string>
          <string>Note</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="le_nom">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>90</y>
+          <x>310</x>
+          <y>110</y>
           <width>113</width>
           <height>22</height>
          </rect>
         </property>
+        <property name="text">
+         <string/>
+        </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="le_adresse">
         <property name="geometry">
          <rect>
-          <x>380</x>
+          <x>310</x>
           <y>160</y>
           <width>113</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_5">
+       <widget class="QLineEdit" name="le_nombre_etoile">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>240</y>
+          <x>650</x>
+          <y>60</y>
           <width>113</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_6">
+       <widget class="QLineEdit" name="le_nombre_des_chambres">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>300</y>
+          <x>650</x>
+          <y>110</y>
           <width>113</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="le_note">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>370</y>
+          <x>650</x>
+          <y>160</y>
           <width>113</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="pb_ajouter">
         <property name="geometry">
          <rect>
-          <x>520</x>
+          <x>210</x>
           <y>190</y>
           <width>93</width>
           <height>28</height>
@@ -358,12 +361,12 @@ text-decoration: underline;</string>
          <string>Ajouter</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="pb_annuler">
         <property name="geometry">
          <rect>
-          <x>520</x>
-          <y>260</y>
-          <width>93</width>
+          <x>460</x>
+          <y>190</y>
+          <width>91</width>
           <height>28</height>
          </rect>
         </property>
@@ -398,6 +401,108 @@ text-decoration: underline;</string>
         </property>
         <property name="pixmap">
          <pixmap>../../okey25.png</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_37">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>60</y>
+          <width>111</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Identifiant</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_identifiant">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>60</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_modifier">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>190</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tab_hebergement">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>240</y>
+          <width>731</width>
+          <height>161</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_38">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>420</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Identifiant</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_id_supp">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>420</y>
+          <width>113</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_supprimer">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>420</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_39">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>10</y>
+          <width>511</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;Segoe Print&quot;;
+background-color: rgb(255, 211, 49);</string>
+        </property>
+        <property name="text">
+         <string>Ajouter votre hebergement</string>
         </property>
        </widget>
       </widget>
@@ -441,125 +546,40 @@ background-color: rgb(255, 211, 49);</string>
        <widget class="QLabel" name="label_19">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>180</y>
-          <width>56</width>
-          <height>21</height>
+          <x>190</x>
+          <y>131</y>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
         <property name="text">
-         <string>Nom</string>
+         <string>Identifiant</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
+       <widget class="QLineEdit" name="rechercher">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>180</y>
-          <width>113</width>
-          <height>22</height>
+          <x>330</x>
+          <y>130</y>
+          <width>131</width>
+          <height>31</height>
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="pb_rechercher">
         <property name="geometry">
          <rect>
-          <x>530</x>
-          <y>150</y>
+          <x>510</x>
+          <y>130</y>
           <width>93</width>
           <height>28</height>
          </rect>
         </property>
         <property name="text">
          <string>Rechecher</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="geometry">
-         <rect>
-          <x>530</x>
-          <y>220</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Trier</string>
-        </property>
-       </widget>
-       <widget class="QTableWidget" name="tableWidget">
-        <property name="geometry">
-         <rect>
-          <x>2</x>
-          <y>311</y>
-          <width>771</width>
-          <height>113</height>
-         </rect>
-        </property>
-        <property name="autoScrollMargin">
-         <number>16</number>
-        </property>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>160</number>
-        </attribute>
-        <column>
-         <property name="text">
-          <string>Nom</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Adresse</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Tel</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Email</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nombre d'étoiles</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Nombre des chambres</string>
-         </property>
-        </column>
-       </widget>
-       <widget class="QPushButton" name="pushButton_8">
-        <property name="geometry">
-         <rect>
-          <x>470</x>
-          <y>440</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Supprimer</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_9">
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>440</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Modifier</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_32">
@@ -589,6 +609,65 @@ background-color: rgb(255, 211, 49);</string>
         </property>
         <property name="text">
          <string>Quitter</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tab_hebergement_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>240</y>
+          <width>731</width>
+          <height>161</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>190</y>
+          <width>91</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>choisir</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>identifiant</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>190</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Tri par=====&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_annuler_2">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>130</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>annuler</string>
         </property>
        </widget>
       </widget>
