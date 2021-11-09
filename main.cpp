@@ -9,18 +9,19 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    Connexion c;
-    bool test=c.ouvrirConnexion();
-    if(test)
+    Connexion c; // une seule instance de la classe connexion
+     bool test=c.ouvrirConnexion(); //Etablir la connexion
+    MainWindow w;//appel des constructeurs des methodes doit se faire apres avoir etablie la connexion à la BD
+
+    if(test) //si la connexion est établie
     {
         w.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
+                                "Click Cancel."), QMessageBox::Cancel);
 
 }
-    else
+    else //si la connexion a echoué
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),
                     QObject::tr("connection failed.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
