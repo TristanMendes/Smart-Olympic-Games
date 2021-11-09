@@ -30,6 +30,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_boutton_ajouterath_clicked()
 {
      bool test=false;
+     //bool test2=false;
 
         int id=ui->lineEdit_ID_3->text().toInt();
         int age=ui->lineEdit_Age_3->text().toInt();
@@ -42,25 +43,18 @@ void MainWindow::on_boutton_ajouterath_clicked()
         QString mail=ui->lineEdit_mail_3->text();
 
         athletesOP A(id,age,nom,prenom,sexe,nationalite,specialite,mail);
-                if(A.Nomtest(nom))
+                if(A.Nomtest(nom)&&(A.Nomtest(prenom)&&(A.Nomtest(nationalite))&&(A.Nomtest(specialite))))
                 {
 
                             test=A.ajouter();
                 }
                 else
                 {
-                    ui->label_nom_test->setText("Nom invalid");
+                    ui->label_nom_test->setText("nom , prenon , nationalite ou specialite mal remplie");
                 }
 
-                /*if(A.Prenomtest(prenom))
-                {
-                    test=A.ajouter();
-                }
 
-                else
-                {
-                    ui->label_prenom_test->setText("Prenom invalid");
-                }*/
+
 
 
           if(test)
@@ -171,9 +165,9 @@ void MainWindow::on_pushButton_Modifierath_clicked()
 void MainWindow::on_bouton_rechercherath_clicked()
 {
     int id=ui->lineEdit_rechercher->text().toInt();
-    QString nom=ui->lineEdit_rechercher->text();
+    //QString nom=ui->lineEdit_rechercher->text();
     ui->table_athletes_2->setModel(A.recherche(id));
-    ui->table_athletes_2->setModel(A.rechercheNom(nom));
+    //ui->table_athletes_2->setModel(A.rechercheNom(nom));
 
    QString test=ui->lineEdit_rechercher->text();
    if(test=="")

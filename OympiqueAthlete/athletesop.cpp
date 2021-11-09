@@ -144,7 +144,7 @@ QSqlQueryModel* athletesOP::recherche(int id)
         return model;
     }
 
-QSqlQueryModel* athletesOP::rechercheNom(QString nom)
+/*QSqlQueryModel* athletesOP::rechercheNom(QString nom)
 {
     QSqlQueryModel* model=new QSqlQueryModel();
     QSqlQuery query;
@@ -167,7 +167,7 @@ QSqlQueryModel* athletesOP::rechercheNom(QString nom)
 
          return model;
 
-}
+}*/
 
 QSqlQueryModel* athletesOP::trier_age()
 {

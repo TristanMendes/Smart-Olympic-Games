@@ -41,7 +41,7 @@ public:
     QSqlQueryModel* afficher();
     bool modifier(int);
     QSqlQueryModel* recherche(int id);
-    QSqlQueryModel* rechercheNom(QString nom);
+    //QSqlQueryModel* rechercheNom(QString nom);
     QSqlQueryModel* trier_age();
     QSqlQueryModel* trier_nationalite();
     QSqlQueryModel* trier_specialite();

@@ -329,7 +329,7 @@ public:
 ""));
         label_nom_test = new QLabel(tab_11);
         label_nom_test->setObjectName(QStringLiteral("label_nom_test"));
-        label_nom_test->setGeometry(QRect(100, 240, 201, 20));
+        label_nom_test->setGeometry(QRect(100, 369, 381, 31));
         label_prenom_test = new QLabel(tab_11);
         label_prenom_test->setObjectName(QStringLiteral("label_prenom_test"));
         label_prenom_test->setGeometry(QRect(150, 320, 121, 16));
@@ -526,7 +526,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(1);
-        tabWidget_2->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
