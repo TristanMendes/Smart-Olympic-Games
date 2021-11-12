@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../Projet C++/Maquettes/image_fond.jpg</file>
+    </qresource>
+</RCC>
