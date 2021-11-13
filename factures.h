@@ -4,45 +4,53 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
+#include <QDateTime>
 
 class factures
 {
 private:
-    struct date
-    {
-        int jour;
-        int mois;
-        int annee;
-    };
     QString reference;
     //Variable nombre de service
     // 1 pour transport seulement
     // 2 - pour hebergement seulement
     // 3 - pour transoport et hebergement
-    int nbService;
+    QString nbService;
     //Statut 1(payee) ou 2(non payee)
-    int statut;
+    QString statut;
     float montant;
-    date dateCreation;
-    date dateModification;
+    QString dateCreation;
+    QString dateModification;
 
-    bool ajouterFacture(QString);
-    bool modifierFacture(QString);
-    bool supprimerFacture(QString);
 
 public:
     factures();
-    factures(QString,int,int,float,date,date);
+    factures(QString,QString,QString,float,QString,QString);
 
-    QString get_reference(){return reference ;}
-    int get_NbServices(){return nbService;}
-    int get_Statut(){return statut;}
-    float get_Montant(){return montant;}
-    date get_DateCreation(){date d; return d;}
-    date get_DateModification(){date d; return d;}
+    void set_reference(QString ref);
+    void set_NbServices(QString nb);
+    void set_Statut(QString st);
+    void set_Montant(float x);
+    void set_DateCreation(QString date);
+    void set_DateModification(QString date);
 
-    bool payerFactures(QString);
+    QString get_reference();
+    QString get_NbServices();
+    QString get_Statut();
+    float get_Montant();
+    QString get_DateCreation();
+    QString get_DateModification();
+    bool ajouterFacture();
+    bool modifierFacture(QString reference,int montant);
+    bool supprimerFacture(QString reference);
+    bool payerFactures(QString reference);
     QSqlQueryModel * consulterFacture();
+    QSqlQueryModel * afficherFacturesNonPayee();
+    QSqlQueryModel * triReference();
+    QSqlQueryModel * triDateCreation();
+    QSqlQueryModel * triDateModification();
+    QSqlQueryModel * triStatut();
+    QSqlQueryModel * triNbServ();
+    QSqlQueryModel * triMontant();
 };
 
 #endif // FACTURES_H
