@@ -1,6 +1,12 @@
+CONFIG +=console
 QT       += core gui
+QT += network
+QT += core gui charts
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets quickwidgets
 
 CONFIG += c++11
 QT +=sql
@@ -18,12 +24,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Connexion.cpp \
+    affectation.cpp \
+    agent.cpp \
+    fan.cpp \
     main.cpp \
     mainwindow.cpp \
     stade.cpp
 
 HEADERS += \
     Connexion.h \
+    affectation.h \
+    agent.h \
+    fan.h \
     mainwindow.h \
     stade.h
 
@@ -34,3 +46,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    qml.qrc

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>map.png</file>
+        <file>localisation.png</file>
+    </qresource>
+</RCC>

@@ -6,7 +6,7 @@
 
 class Connexion
 {
-    QSqlDatabase db ; //db attribut de la classe Connexion
+    QSqlDatabase db ;
 public:
     Connexion();
     bool ouvrirConnexion();
