@@ -2,6 +2,8 @@
 #include <QSqlQuery>
 #include<QtDebug>
 #include<QObject>
+//mailing
+#include "smtp.h"
 //stat
 #include <iostream>
 using namespace std;
@@ -194,6 +196,8 @@ query.exec();
 QSqlQueryModel *model=new QSqlQueryModel ;
 model->setQuery(query);
 return model;}
+
+
 
 
 
