@@ -29,7 +29,7 @@ background-color: rgb(255, 255, 255);
 </string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -1118,10 +1118,10 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Métiers</string>
      </attribute>
-     <widget class="QTabWidget" name="tab_recherche_2">
+     <widget class="QTabWidget" name="tabWidget_3">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>0</y>
         <width>1051</width>
         <height>621</height>
@@ -1132,7 +1132,7 @@ p, li { white-space: pre-wrap; }
 background-image: url(:/fond.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="tab_8">
        <attribute name="title">
@@ -1633,7 +1633,7 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>130</y>
+          <y>120</y>
           <width>271</width>
           <height>41</height>
          </rect>
@@ -1649,7 +1649,7 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>330</x>
-          <y>130</y>
+          <y>120</y>
           <width>201</width>
           <height>31</height>
          </rect>
@@ -1662,7 +1662,7 @@ p, li { white-space: pre-wrap; }
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>220</y>
+          <y>190</y>
           <width>281</width>
           <height>41</height>
          </rect>
@@ -1671,14 +1671,14 @@ p, li { white-space: pre-wrap; }
          <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
         <property name="text">
-         <string>Nombre de billets existants</string>
+         <string>Nombre de billets actuel</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="le_billet_nbr_billet">
+       <widget class="QLineEdit" name="le_billet_nbr_billet_actuel">
         <property name="geometry">
          <rect>
           <x>330</x>
-          <y>230</y>
+          <y>200</y>
           <width>201</width>
           <height>31</height>
          </rect>
@@ -1758,6 +1758,38 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
        </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>270</y>
+          <width>281</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Nombre de billets à ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_billet_nbr_billet_ajouter">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>280</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_12">
        <attribute name="title">
@@ -1784,8 +1816,8 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
        <widget class="QLineEdit" name="le_QR_id">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>190</y>
+          <x>210</x>
+          <y>130</y>
           <width>201</width>
           <height>31</height>
          </rect>
@@ -1797,8 +1829,8 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
        <widget class="QLabel" name="label_22">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>180</y>
+          <x>20</x>
+          <y>120</y>
           <width>181</width>
           <height>41</height>
          </rect>
@@ -1852,7 +1884,7 @@ p, li { white-space: pre-wrap; }
        <widget class="QTableView" name="tab_QR">
         <property name="geometry">
          <rect>
-          <x>500</x>
+          <x>550</x>
           <y>70</y>
           <width>441</width>
           <height>531</height>
@@ -1862,8 +1894,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLabel" name="label_20">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>270</y>
+          <x>20</x>
+          <y>210</y>
           <width>281</width>
           <height>41</height>
          </rect>
@@ -1878,8 +1910,8 @@ p, li { white-space: pre-wrap; }
        <widget class="QLineEdit" name="le_QR_nbr_billet">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>280</y>
+          <x>320</x>
+          <y>220</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -1889,6 +1921,38 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="text">
          <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="le_QR_nbr_QR">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>310</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>300</y>
+          <width>321</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Nombre de QR code à générer:</string>
         </property>
        </widget>
       </widget>
@@ -1921,7 +1985,7 @@ p, li { white-space: pre-wrap; }
        <widget class="QPushButton" name="pushButton_34">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>240</x>
           <y>140</y>
           <width>521</width>
           <height>71</height>
@@ -1936,10 +2000,10 @@ font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
          <string>Le nombre de voyages effectués en fonction des moyens de transport</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="B_stat_type">
+       <widget class="QPushButton" name="B_stat_nbr_billet">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>250</x>
           <y>300</y>
           <width>521</width>
           <height>71</height>
@@ -1955,8 +2019,110 @@ font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
        </widget>
        <zorder>pushButton_34</zorder>
-       <zorder>B_stat_type</zorder>
+       <zorder>B_stat_nbr_billet</zorder>
        <zorder>textBrowser_7</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <widget class="QCustomPlot" name="customPlot" native="true">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>961</width>
+          <height>561</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <widget class="QCustomPlot" name="plot" native="true">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>801</width>
+          <height>471</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_x">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>530</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="B_ajouter">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>530</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="B_clear">
+        <property name="geometry">
+         <rect>
+          <x>780</x>
+          <y>530</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_25">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>530</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nbr_billet</string>
+        </property>
+       </widget>
+       <widget class="QDoubleSpinBox" name="spin_y">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>530</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_27">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>530</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Moyen de transport</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -1983,6 +2149,14 @@ font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

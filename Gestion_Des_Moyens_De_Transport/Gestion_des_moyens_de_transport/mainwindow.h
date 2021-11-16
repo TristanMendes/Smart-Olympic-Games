@@ -1,12 +1,13 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+
 #include <QMainWindow>
 #include "moyensdetransport.h"
-#include <QtCharts>
-#include <QChartView>
-#include <QBarSet>
-#include <QBarSeries>
+#include "qcustomplot.h"
+
+
+
 
 
 
@@ -48,10 +49,26 @@ private slots:
 
     void on_B_QR_clicked();
 
+
+
+
+
+
+    void addPoint(double x,double y);
+    void clearData();
+    void plot();
+
+    void on_B_ajouter_clicked();
+
+    void on_B_clear_clicked();
+
+
 private:
     Ui::MainWindow *ui;
     MoyensDeTransport M;
     MoyensDeTransport M1;
+    QVector <double> qv_x,qv_y;
+    int index;
 
 };
 

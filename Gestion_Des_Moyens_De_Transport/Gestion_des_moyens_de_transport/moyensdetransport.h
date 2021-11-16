@@ -31,8 +31,30 @@ public:
         void setnbr_billet(int);
         bool ajouter();
        QSqlQueryModel* afficher();
+       QSqlQueryModel *stats();
+
        bool supprimer(int);
        bool modifier(int);
+       bool modifier_billet (int,int);
+       bool modifie_billet(int,int,int);
+
+       int recherche_nbr_billet(int);
+              bool modifier_QR_code (int,int,int);
+              bool recherche_id (int);
+
+              QSqlQueryModel * rechercher_nom(QString );
+              QSqlQueryModel * rechercher_capacite(int );
+              QSqlQueryModel * rechercher_dest_dep(QString );
+              QSqlQueryModel * rechercher_type(QString );
+              QSqlQueryModel * rechercher_dest_arr(QString );
+              QSqlQueryModel * rechercher_nbr_voyages(int );
+              QSqlQueryModel * choix_moyen(int );
+              QSqlQueryModel* afficher_billet();
+              QSqlQueryModel* rechercher_id(int);
+              void statistique(QVector<double>* ticks,QVector<QString> *labels);
+
+
+
 
 
 

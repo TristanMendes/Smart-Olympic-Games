@@ -65,6 +65,10 @@ bool MoyensDeTransport::ajouter()
 bool MoyensDeTransport::supprimer(int ide)
 {   QMessageBox msgbox;
     QSqlQuery query;
+    MoyensDeTransport M;
+
+
+
     QString res=QString::number(ide);
 
 
@@ -74,7 +78,10 @@ bool MoyensDeTransport::supprimer(int ide)
 
 
 
+
+
 return query.exec();}
+
 
 
 
@@ -121,3 +128,305 @@ query.bindValue(":capacite", capacite);
 return    query.exec();
 }
 
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_nom(QString nom)
+ {
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where nom_moyen=:nom");
+     qry.bindValue(":nom",nom);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_capacite(int capacite)
+ {
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where Capacite=:capacite");
+     qry.bindValue(":capacite",capacite);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+
+
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_dest_dep(QString destination_depart)
+{
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where Destination_Depart=:destination_depart");
+     qry.bindValue(":destination_depart",destination_depart);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+
+QSqlQueryModel *  MoyensDeTransport::choix_moyen(int id)
+ {
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where id_moyen=:id");
+     qry.bindValue(":id",id);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+
+
+QSqlQueryModel* MoyensDeTransport::afficher_billet()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+         model->setQuery("SELECT* FROM Moyens_De_Transport");
+         model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+
+         model->setHeaderData(2, Qt::Horizontal, QObject::tr("nbr_billet"));
+
+
+return model;
+
+}
+
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_type(QString type)
+ {
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where type_moyen=:type");
+     qry.bindValue(":type",type);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_dest_arr(QString destination_arrivee)
+{
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where Destination_Arrivee=:destination_arrivee");
+     qry.bindValue(":destination_arrivee",destination_arrivee);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_nbr_voyages(int nbr_voyages)
+ {
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where nbr_voyages=:nbr_voyages");
+     qry.bindValue(":nbr_voyages",nbr_voyages);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+
+QSqlQueryModel *  MoyensDeTransport::rechercher_id(int id)
+ {
+     QSqlQuery qry;
+     qry.prepare("select * from Moyens_De_Transport where id_moyen=:id");
+     qry.bindValue(":id",id);
+     qry.exec();
+
+     QSqlQueryModel *model= new QSqlQueryModel;
+     model->setQuery(qry);
+
+
+    return model;
+
+
+ }
+
+/*bool MoyensDeTransport::modifier_billet (int idd,int nbr_billets)
+{
+    QSqlQuery query,qry;
+    QString res=QString::number(idd);
+   // qry.prepare("select nbr_billet from Moyens_De_Transport where id_moyen=:id");
+    //qry.bindValue(":nbr_billets",nbr_billets);
+    //qry.exec();
+    int somme=nbr_billets+1;
+    query.prepare("Update Moyens_De_Transport set id_moyen = :id , nbr_billet=:nbr_billet  where id_moyen = :id ");
+
+    query.bindValue(":id", res);
+    query.bindValue(":nbr_billet", somme);
+
+
+    return    query.exec();
+}*/
+
+
+
+
+
+
+
+
+
+
+
+bool MoyensDeTransport::modifier_QR_code (int idd,int nbr,int nb)
+{
+
+    MoyensDeTransport M;
+       QString res=QString::number(idd);
+
+
+
+       QSqlQuery query;
+
+
+       nbr=nbr-nb;
+       query.prepare("Update Moyens_De_Transport set id_moyen = :id , nbr_billet=:nbr_billet  where id_moyen = :id ");
+
+       query.bindValue(":id", res);
+       query.bindValue(":nbr_billet", nbr);
+
+
+       return    query.exec();
+
+
+
+}
+
+
+
+bool MoyensDeTransport::recherche_id(int idd)
+{
+    QSqlQuery qry;
+    qry.prepare("select * from Moyens_De_Transport where id_moyen=:idd");
+    qry.bindValue(":id",idd);
+
+    return qry.exec();
+
+}
+
+
+/*int MoyensDeTransport::recherche_nbr_billet(int idd)
+{   int nb=0;
+    QSqlQuery qry;
+    qry.prepare("select nbr_billet from Moyens_De_Transport where id_moyen=:idd");
+    qry.bindValue(":id",idd);
+
+
+    if(qry.exec())
+        {
+    while(qry.next())
+        {
+            nb = qry.value(1).toInt();  //Récupère le résultat de la requête
+            qDebug() << nb;
+
+
+
+
+
+
+}} return nb;} */
+
+int MoyensDeTransport::recherche_nbr_billet(int id_moyen)
+{
+
+
+    QSqlQuery query;
+    int n;
+    QString  num = QString::number(id_moyen);
+            query.exec("SELECT nbr_billet from Moyen_De_Transport where id_moyen=:id_moyen");
+            while (query.next())
+            {
+                n=query.value("nbr_billet").toInt();
+
+
+
+            }
+
+
+            return n;
+
+
+
+
+
+
+
+}
+
+
+bool MoyensDeTransport::modifie_billet (int idd, int nbr,int nb)
+{   MoyensDeTransport M;
+    QString res=QString::number(idd);
+    QSqlQuery query;
+
+
+    nbr=nbr+nb;
+    query.prepare("Update Moyens_De_Transport set id_moyen = :id , nbr_billet=:nbr_billet  where id_moyen = :id ");
+
+    query.bindValue(":id", res);
+    query.bindValue(":nbr_billet", nbr);
+
+
+    return    query.exec();
+
+}
+
+
+
+
+
+
+
+void  MoyensDeTransport::statistique(QVector<double>* ticks,QVector<QString> *labels)
+{
+    QSqlQuery q;
+    int i=0;
+    q.exec("select CAPACITE from Moyens_De_Transport");
+    while (q.next())
+    {
+        QString nom_moyen= q.value(0).toString();
+        i++;
+        *ticks<<i;
+        *labels <<nom_moyen;
+    }
+}

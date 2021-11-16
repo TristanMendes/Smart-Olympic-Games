@@ -5,10 +5,11 @@
 #-------------------------------------------------
 
 QT       += core gui sql
-QT       += core gui charts
 
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = Atelier_Connexion
 TEMPLATE = app
@@ -30,12 +31,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    moyensdetransport.cpp
+    moyensdetransport.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
         mainwindow.h \
     connection.h \
-    moyensdetransport.h
+    moyensdetransport.h \
+    qcustomplot.h
 
 FORMS += \
         mainwindow.ui
