@@ -1,8 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include <QPainter>
+#include<QtGui>
 #include <QMainWindow>
 #include <hebergement.h>
+#include <calendrier.h>
+#include <payment.h>
+
+#include <QVariant>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -32,8 +38,37 @@ private slots:
 
     void on_pb_annuler_2_clicked();
 
+    void on_tab_hebergement_activated(const QModelIndex &index);
+
+
+
+    void on_pb_ajouter_2_clicked();
+
+    void on_le_modifier_2_clicked();
+
+    void on_pb_supprimer_2_clicked();
+
+
+
+void statistiques(QString,QString ,int,int,QString);
+
+
+void on_par_capacite_clicked();
+
+void on_pb_map_clicked();
+
+void on_table_prix_activated(const QModelIndex &index);
+
+void on_table_periode_activated(const QModelIndex &index);
+
+void on_pb_reserve_clicked();
+
 private:
     Ui::MainWindow *ui;
     Hebergement H;
+    calendrier c ;
+    payment p;
+signals:
+   void setCenter(QVariant,QVariant);
 };
 #endif // MAINWINDOW_H

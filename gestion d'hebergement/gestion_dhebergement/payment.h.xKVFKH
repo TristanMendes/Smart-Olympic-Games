@@ -1,0 +1,11 @@
+#ifndef PAYMENT_H
+#define PAYMENT_H
+
+Error in " Cpp.includeStatement('', Util.preferredSuffix('text/x-c++hdr'), ['QObject', 'QWidget', 'QMainWindow', 'QQuickItem', 'QSharedData'], 'C:/Users/LENOVO-PC/Desktop/Smart-Olympic-Games-2A19/gestion d'hebergement/gestion_dhebergement')": SyntaxError: Expected token `)'
+  class payment
+{
+    public:
+    payment();
+};
+
+#endif // PAYMENT_H

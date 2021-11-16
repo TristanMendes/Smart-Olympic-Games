@@ -1,0 +1,10 @@
+release/calendrier.o
+release/connection.o
+release/dialog.o
+release/hebergement.o
+release/main.o
+release/mainwindow.o
+release/payment.o
+release/qrc_qml.o
+release/moc_dialog.o
+release/moc_mainwindow.o

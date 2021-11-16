@@ -1,0 +1,657 @@
+/********************************************************************************
+** Form generated from reading UI file 'mainwindow.ui'
+**
+** Created by: Qt User Interface Compiler version 5.15.0
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_MAINWINDOW_H
+#define UI_MAINWINDOW_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDateEdit>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableView>
+#include <QtWidgets/QWidget>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_MainWindow
+{
+public:
+    QWidget *centralwidget;
+    QTabWidget *tabWidget;
+    QWidget *tab;
+    QLabel *label_8;
+    QLabel *label_9;
+    QLabel *label_10;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QLabel *label_11;
+    QLabel *label_12;
+    QLabel *label;
+    QWidget *tab_2;
+    QTabWidget *tabWidget_2;
+    QWidget *tab_4;
+    QLabel *label_13;
+    QLabel *label_14;
+    QLabel *label_15;
+    QLabel *label_16;
+    QLabel *label_17;
+    QLineEdit *le_nom;
+    QLineEdit *le_adresse;
+    QLineEdit *le_nombre_etoile;
+    QLineEdit *le_nombre_des_chambres;
+    QLineEdit *le_note;
+    QPushButton *pb_ajouter;
+    QPushButton *pb_annuler;
+    QPushButton *pushButton_5;
+    QLabel *label_37;
+    QLineEdit *le_identifiant;
+    QPushButton *pb_modifier;
+    QTableView *tab_hebergement;
+    QLabel *label_38;
+    QLineEdit *le_id_supp;
+    QPushButton *pb_supprimer;
+    QLabel *label_39;
+    QLabel *label_24;
+    QLineEdit *le_prix;
+    QLabel *label_45;
+    QWidget *tab_5;
+    QLabel *label_18;
+    QLabel *label_19;
+    QLineEdit *rechercher;
+    QPushButton *pb_rechercher;
+    QPushButton *pushButton_21;
+    QTableView *tab_hebergement_2;
+    QComboBox *comboBox;
+    QLabel *label_40;
+    QPushButton *pb_annuler_2;
+    QLabel *label_46;
+    QWidget *tab_3;
+    QLabel *label_2;
+    QTabWidget *tabWidget_3;
+    QWidget *tab_9;
+    QLabel *label_41;
+    QLineEdit *le_id_2;
+    QPushButton *pb_ajouter_2;
+    QLabel *label_42;
+    QDateEdit *le_date_deb;
+    QLabel *label_43;
+    QDateEdit *le_date_fin;
+    QPushButton *le_modifier_2;
+    QPushButton *pb_reservation;
+    QLabel *label_20;
+    QLabel *label_33;
+    QPushButton *pushButton_12;
+    QLabel *label_21;
+    QLineEdit *la_periode;
+    QLabel *label_47;
+    QWidget *tab_10;
+    QTableView *tab_etudiant_2;
+    QLabel *label_48;
+    QLabel *label_31;
+    QWidget *tab_11;
+    QLineEdit *le_id_sup_2;
+    QPushButton *pb_supprimer_2;
+    QLabel *label_49;
+    QLabel *label_32;
+    QWidget *tab_6;
+    QLabel *label_23;
+    QPushButton *pushButton_15;
+    QPushButton *pb_map;
+    QLabel *label_50;
+    QWidget *tab_7;
+    QLabel *label_25;
+    QLabel *label_26;
+    QLabel *label_27;
+    QLabel *label_28;
+    QLineEdit *la_prix;
+    QLineEdit *la_nbchambre;
+    QLineEdit *le_periode;
+    QPushButton *pb_reserve;
+    QPushButton *pushButton_17;
+    QComboBox *comboBox_2;
+    QTableView *table_prix;
+    QTableView *table_periode;
+    QTableView *table_payment;
+    QLineEdit *total;
+    QLabel *label_44;
+    QLabel *label_51;
+    QWidget *tab_8;
+    QPushButton *pushButton_18;
+    QPushButton *par_capacite;
+    QPushButton *pushButton_20;
+    QLabel *label_29;
+    QLabel *label_30;
+    QLineEdit *lineEdit_13;
+    QLabel *label_22;
+    QLabel *label_52;
+    QMenuBar *menubar;
+    QStatusBar *statusbar;
+
+    void setupUi(QMainWindow *MainWindow)
+    {
+        if (MainWindow->objectName().isEmpty())
+            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+        MainWindow->resize(1191, 653);
+        centralwidget = new QWidget(MainWindow);
+        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        tabWidget = new QTabWidget(centralwidget);
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
+        tabWidget->setGeometry(QRect(0, 0, 1081, 621));
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        label_8 = new QLabel(tab);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(310, 10, 251, 41));
+        label_8->setStyleSheet(QString::fromUtf8("font: 75 20pt \"Segoe Print\";\n"
+""));
+        label_9 = new QLabel(tab);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setGeometry(QRect(220, 120, 131, 31));
+        label_9->setStyleSheet(QString::fromUtf8("font: 12pt \"MS Shell Dlg 2\";"));
+        label_10 = new QLabel(tab);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setGeometry(QRect(220, 220, 131, 31));
+        label_10->setStyleSheet(QString::fromUtf8("font: 12pt \"MS Shell Dlg 2\";"));
+        lineEdit = new QLineEdit(tab);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(440, 130, 113, 22));
+        lineEdit_2 = new QLineEdit(tab);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(440, 220, 113, 22));
+        pushButton = new QPushButton(tab);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(280, 300, 231, 28));
+        pushButton->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 255);"));
+        pushButton_2 = new QPushButton(tab);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(20, 140, 93, 28));
+        label_11 = new QLabel(tab);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setGeometry(QRect(340, 350, 141, 16));
+        label_11->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);\n"
+"font: 8pt \"MS Shell Dlg 2\";\n"
+"text-decoration: underline;"));
+        label_12 = new QLabel(tab);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setGeometry(QRect(-120, 20, 291, 401));
+        label_12->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        label = new QLabel(tab);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(14, -20, 891, 491));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../../Downloads/olampic.jpg")));
+        tabWidget->addTab(tab, QString());
+        label->raise();
+        label_8->raise();
+        label_9->raise();
+        label_10->raise();
+        lineEdit->raise();
+        lineEdit_2->raise();
+        pushButton->raise();
+        pushButton_2->raise();
+        label_11->raise();
+        label_12->raise();
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QString::fromUtf8("tab_2"));
+        tabWidget_2 = new QTabWidget(tab_2);
+        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        tabWidget_2->setGeometry(QRect(0, 0, 1021, 581));
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QString::fromUtf8("tab_4"));
+        label_13 = new QLabel(tab_4);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setGeometry(QRect(160, 110, 61, 20));
+        label_13->setStyleSheet(QString::fromUtf8("font: 10pt \"MS Shell Dlg 2\";"));
+        label_14 = new QLabel(tab_4);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setGeometry(QRect(160, 160, 81, 20));
+        label_14->setStyleSheet(QString::fromUtf8("font: 10pt \"MS Shell Dlg 2\";"));
+        label_15 = new QLabel(tab_4);
+        label_15->setObjectName(QString::fromUtf8("label_15"));
+        label_15->setGeometry(QRect(400, 60, 141, 20));
+        label_15->setStyleSheet(QString::fromUtf8("font: 10pt \"MS Shell Dlg 2\";"));
+        label_16 = new QLabel(tab_4);
+        label_16->setObjectName(QString::fromUtf8("label_16"));
+        label_16->setGeometry(QRect(400, 110, 171, 20));
+        label_16->setStyleSheet(QString::fromUtf8("font: 10pt \"MS Shell Dlg 2\";"));
+        label_17 = new QLabel(tab_4);
+        label_17->setObjectName(QString::fromUtf8("label_17"));
+        label_17->setGeometry(QRect(400, 160, 51, 20));
+        label_17->setStyleSheet(QString::fromUtf8("font: 10pt \"MS Shell Dlg 2\";"));
+        le_nom = new QLineEdit(tab_4);
+        le_nom->setObjectName(QString::fromUtf8("le_nom"));
+        le_nom->setGeometry(QRect(270, 110, 113, 22));
+        le_adresse = new QLineEdit(tab_4);
+        le_adresse->setObjectName(QString::fromUtf8("le_adresse"));
+        le_adresse->setGeometry(QRect(270, 160, 113, 22));
+        le_nombre_etoile = new QLineEdit(tab_4);
+        le_nombre_etoile->setObjectName(QString::fromUtf8("le_nombre_etoile"));
+        le_nombre_etoile->setGeometry(QRect(580, 60, 113, 22));
+        le_nombre_des_chambres = new QLineEdit(tab_4);
+        le_nombre_des_chambres->setObjectName(QString::fromUtf8("le_nombre_des_chambres"));
+        le_nombre_des_chambres->setGeometry(QRect(580, 110, 113, 22));
+        le_note = new QLineEdit(tab_4);
+        le_note->setObjectName(QString::fromUtf8("le_note"));
+        le_note->setGeometry(QRect(580, 160, 113, 22));
+        pb_ajouter = new QPushButton(tab_4);
+        pb_ajouter->setObjectName(QString::fromUtf8("pb_ajouter"));
+        pb_ajouter->setGeometry(QRect(230, 200, 93, 28));
+        pb_annuler = new QPushButton(tab_4);
+        pb_annuler->setObjectName(QString::fromUtf8("pb_annuler"));
+        pb_annuler->setGeometry(QRect(600, 200, 91, 28));
+        pushButton_5 = new QPushButton(tab_4);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setGeometry(QRect(20, 140, 93, 28));
+        label_37 = new QLabel(tab_4);
+        label_37->setObjectName(QString::fromUtf8("label_37"));
+        label_37->setGeometry(QRect(160, 60, 81, 20));
+        label_37->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        le_identifiant = new QLineEdit(tab_4);
+        le_identifiant->setObjectName(QString::fromUtf8("le_identifiant"));
+        le_identifiant->setGeometry(QRect(270, 60, 113, 22));
+        pb_modifier = new QPushButton(tab_4);
+        pb_modifier->setObjectName(QString::fromUtf8("pb_modifier"));
+        pb_modifier->setGeometry(QRect(420, 200, 93, 28));
+        tab_hebergement = new QTableView(tab_4);
+        tab_hebergement->setObjectName(QString::fromUtf8("tab_hebergement"));
+        tab_hebergement->setGeometry(QRect(20, 240, 851, 161));
+        label_38 = new QLabel(tab_4);
+        label_38->setObjectName(QString::fromUtf8("label_38"));
+        label_38->setGeometry(QRect(190, 420, 91, 31));
+        label_38->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        le_id_supp = new QLineEdit(tab_4);
+        le_id_supp->setObjectName(QString::fromUtf8("le_id_supp"));
+        le_id_supp->setGeometry(QRect(320, 420, 113, 31));
+        pb_supprimer = new QPushButton(tab_4);
+        pb_supprimer->setObjectName(QString::fromUtf8("pb_supprimer"));
+        pb_supprimer->setGeometry(QRect(470, 420, 93, 28));
+        label_39 = new QLabel(tab_4);
+        label_39->setObjectName(QString::fromUtf8("label_39"));
+        label_39->setGeometry(QRect(330, 10, 881, 31));
+        label_39->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        label_24 = new QLabel(tab_4);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(710, 110, 55, 21));
+        label_24->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        le_prix = new QLineEdit(tab_4);
+        le_prix->setObjectName(QString::fromUtf8("le_prix"));
+        le_prix->setGeometry(QRect(750, 110, 113, 22));
+        label_45 = new QLabel(tab_4);
+        label_45->setObjectName(QString::fromUtf8("label_45"));
+        label_45->setGeometry(QRect(-120, 20, 261, 401));
+        label_45->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        tabWidget_2->addTab(tab_4, QString());
+        tab_5 = new QWidget();
+        tab_5->setObjectName(QString::fromUtf8("tab_5"));
+        label_18 = new QLabel(tab_5);
+        label_18->setObjectName(QString::fromUtf8("label_18"));
+        label_18->setGeometry(QRect(330, 10, 871, 31));
+        label_18->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        label_19 = new QLabel(tab_5);
+        label_19->setObjectName(QString::fromUtf8("label_19"));
+        label_19->setGeometry(QRect(190, 131, 101, 31));
+        label_19->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        rechercher = new QLineEdit(tab_5);
+        rechercher->setObjectName(QString::fromUtf8("rechercher"));
+        rechercher->setGeometry(QRect(330, 130, 131, 31));
+        pb_rechercher = new QPushButton(tab_5);
+        pb_rechercher->setObjectName(QString::fromUtf8("pb_rechercher"));
+        pb_rechercher->setGeometry(QRect(510, 130, 93, 28));
+        pushButton_21 = new QPushButton(tab_5);
+        pushButton_21->setObjectName(QString::fromUtf8("pushButton_21"));
+        pushButton_21->setGeometry(QRect(20, 140, 93, 28));
+        tab_hebergement_2 = new QTableView(tab_5);
+        tab_hebergement_2->setObjectName(QString::fromUtf8("tab_hebergement_2"));
+        tab_hebergement_2->setGeometry(QRect(20, 240, 851, 161));
+        comboBox = new QComboBox(tab_5);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(510, 190, 91, 22));
+        label_40 = new QLabel(tab_5);
+        label_40->setObjectName(QString::fromUtf8("label_40"));
+        label_40->setGeometry(QRect(350, 190, 141, 21));
+        label_40->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        pb_annuler_2 = new QPushButton(tab_5);
+        pb_annuler_2->setObjectName(QString::fromUtf8("pb_annuler_2"));
+        pb_annuler_2->setGeometry(QRect(630, 130, 93, 28));
+        label_46 = new QLabel(tab_5);
+        label_46->setObjectName(QString::fromUtf8("label_46"));
+        label_46->setGeometry(QRect(-120, 20, 261, 401));
+        label_46->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        tabWidget_2->addTab(tab_5, QString());
+        tab_3 = new QWidget();
+        tab_3->setObjectName(QString::fromUtf8("tab_3"));
+        label_2 = new QLabel(tab_3);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(110, 40, 671, 401));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/fond.jpg")));
+        tabWidget_3 = new QTabWidget(tab_3);
+        tabWidget_3->setObjectName(QString::fromUtf8("tabWidget_3"));
+        tabWidget_3->setGeometry(QRect(0, 0, 831, 491));
+        tab_9 = new QWidget();
+        tab_9->setObjectName(QString::fromUtf8("tab_9"));
+        label_41 = new QLabel(tab_9);
+        label_41->setObjectName(QString::fromUtf8("label_41"));
+        label_41->setGeometry(QRect(250, 260, 141, 16));
+        le_id_2 = new QLineEdit(tab_9);
+        le_id_2->setObjectName(QString::fromUtf8("le_id_2"));
+        le_id_2->setGeometry(QRect(400, 260, 113, 22));
+        pb_ajouter_2 = new QPushButton(tab_9);
+        pb_ajouter_2->setObjectName(QString::fromUtf8("pb_ajouter_2"));
+        pb_ajouter_2->setGeometry(QRect(590, 270, 93, 28));
+        label_42 = new QLabel(tab_9);
+        label_42->setObjectName(QString::fromUtf8("label_42"));
+        label_42->setGeometry(QRect(300, 170, 81, 16));
+        le_date_deb = new QDateEdit(tab_9);
+        le_date_deb->setObjectName(QString::fromUtf8("le_date_deb"));
+        le_date_deb->setGeometry(QRect(300, 120, 110, 22));
+        le_date_deb->setDateTime(QDateTime(QDate(2021, 11, 3), QTime(0, 0, 0)));
+        label_43 = new QLabel(tab_9);
+        label_43->setObjectName(QString::fromUtf8("label_43"));
+        label_43->setGeometry(QRect(490, 110, 56, 16));
+        le_date_fin = new QDateEdit(tab_9);
+        le_date_fin->setObjectName(QString::fromUtf8("le_date_fin"));
+        le_date_fin->setGeometry(QRect(580, 110, 110, 22));
+        le_date_fin->setDateTime(QDateTime(QDate(2021, 11, 2), QTime(0, 0, 0)));
+        le_modifier_2 = new QPushButton(tab_9);
+        le_modifier_2->setObjectName(QString::fromUtf8("le_modifier_2"));
+        le_modifier_2->setGeometry(QRect(590, 330, 93, 28));
+        pb_reservation = new QPushButton(tab_9);
+        pb_reservation->setObjectName(QString::fromUtf8("pb_reservation"));
+        pb_reservation->setGeometry(QRect(400, 390, 93, 28));
+        label_20 = new QLabel(tab_9);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+        label_20->setGeometry(QRect(320, 0, 811, 31));
+        label_20->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        label_33 = new QLabel(tab_9);
+        label_33->setObjectName(QString::fromUtf8("label_33"));
+        label_33->setGeometry(QRect(-70, -60, 341, 431));
+        label_33->setPixmap(QPixmap(QString::fromUtf8("../../okey25.png")));
+        pushButton_12 = new QPushButton(tab_9);
+        pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
+        pushButton_12->setGeometry(QRect(10, 120, 111, 31));
+        label_21 = new QLabel(tab_9);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setGeometry(QRect(290, 370, 81, 16));
+        la_periode = new QLineEdit(tab_9);
+        la_periode->setObjectName(QString::fromUtf8("la_periode"));
+        la_periode->setGeometry(QRect(400, 360, 113, 22));
+        label_47 = new QLabel(tab_9);
+        label_47->setObjectName(QString::fromUtf8("label_47"));
+        label_47->setGeometry(QRect(-120, 0, 271, 401));
+        label_47->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        tabWidget_3->addTab(tab_9, QString());
+        tab_10 = new QWidget();
+        tab_10->setObjectName(QString::fromUtf8("tab_10"));
+        tab_etudiant_2 = new QTableView(tab_10);
+        tab_etudiant_2->setObjectName(QString::fromUtf8("tab_etudiant_2"));
+        tab_etudiant_2->setGeometry(QRect(85, 110, 721, 192));
+        label_48 = new QLabel(tab_10);
+        label_48->setObjectName(QString::fromUtf8("label_48"));
+        label_48->setGeometry(QRect(-120, 0, 271, 401));
+        label_48->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        label_31 = new QLabel(tab_10);
+        label_31->setObjectName(QString::fromUtf8("label_31"));
+        label_31->setGeometry(QRect(320, 0, 811, 31));
+        label_31->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        tabWidget_3->addTab(tab_10, QString());
+        tab_11 = new QWidget();
+        tab_11->setObjectName(QString::fromUtf8("tab_11"));
+        le_id_sup_2 = new QLineEdit(tab_11);
+        le_id_sup_2->setObjectName(QString::fromUtf8("le_id_sup_2"));
+        le_id_sup_2->setGeometry(QRect(230, 90, 113, 22));
+        pb_supprimer_2 = new QPushButton(tab_11);
+        pb_supprimer_2->setObjectName(QString::fromUtf8("pb_supprimer_2"));
+        pb_supprimer_2->setGeometry(QRect(400, 90, 93, 28));
+        label_49 = new QLabel(tab_11);
+        label_49->setObjectName(QString::fromUtf8("label_49"));
+        label_49->setGeometry(QRect(-120, 0, 271, 401));
+        label_49->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        label_32 = new QLabel(tab_11);
+        label_32->setObjectName(QString::fromUtf8("label_32"));
+        label_32->setGeometry(QRect(320, 0, 811, 31));
+        label_32->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        tabWidget_3->addTab(tab_11, QString());
+        tabWidget_2->addTab(tab_3, QString());
+        tab_6 = new QWidget();
+        tab_6->setObjectName(QString::fromUtf8("tab_6"));
+        label_23 = new QLabel(tab_6);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        label_23->setGeometry(QRect(330, 10, 821, 31));
+        label_23->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        pushButton_15 = new QPushButton(tab_6);
+        pushButton_15->setObjectName(QString::fromUtf8("pushButton_15"));
+        pushButton_15->setGeometry(QRect(20, 140, 93, 28));
+        pb_map = new QPushButton(tab_6);
+        pb_map->setObjectName(QString::fromUtf8("pb_map"));
+        pb_map->setGeometry(QRect(450, 220, 291, 28));
+        label_50 = new QLabel(tab_6);
+        label_50->setObjectName(QString::fromUtf8("label_50"));
+        label_50->setGeometry(QRect(-120, 20, 261, 401));
+        label_50->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        tabWidget_2->addTab(tab_6, QString());
+        tab_7 = new QWidget();
+        tab_7->setObjectName(QString::fromUtf8("tab_7"));
+        label_25 = new QLabel(tab_7);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(330, 10, 821, 31));
+        label_25->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        label_26 = new QLabel(tab_7);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+        label_26->setGeometry(QRect(210, 150, 121, 20));
+        label_26->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        label_27 = new QLabel(tab_7);
+        label_27->setObjectName(QString::fromUtf8("label_27"));
+        label_27->setGeometry(QRect(210, 210, 261, 20));
+        label_27->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        label_28 = new QLabel(tab_7);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+        label_28->setGeometry(QRect(210, 280, 161, 20));
+        label_28->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        la_prix = new QLineEdit(tab_7);
+        la_prix->setObjectName(QString::fromUtf8("la_prix"));
+        la_prix->setGeometry(QRect(460, 140, 113, 22));
+        la_nbchambre = new QLineEdit(tab_7);
+        la_nbchambre->setObjectName(QString::fromUtf8("la_nbchambre"));
+        la_nbchambre->setGeometry(QRect(460, 210, 113, 22));
+        le_periode = new QLineEdit(tab_7);
+        le_periode->setObjectName(QString::fromUtf8("le_periode"));
+        le_periode->setGeometry(QRect(360, 280, 113, 22));
+        pb_reserve = new QPushButton(tab_7);
+        pb_reserve->setObjectName(QString::fromUtf8("pb_reserve"));
+        pb_reserve->setGeometry(QRect(890, 360, 93, 28));
+        pushButton_17 = new QPushButton(tab_7);
+        pushButton_17->setObjectName(QString::fromUtf8("pushButton_17"));
+        pushButton_17->setGeometry(QRect(20, 140, 93, 28));
+        comboBox_2 = new QComboBox(tab_7);
+        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+        comboBox_2->setGeometry(QRect(500, 270, 73, 22));
+        table_prix = new QTableView(tab_7);
+        table_prix->setObjectName(QString::fromUtf8("table_prix"));
+        table_prix->setGeometry(QRect(605, 80, 391, 91));
+        table_periode = new QTableView(tab_7);
+        table_periode->setObjectName(QString::fromUtf8("table_periode"));
+        table_periode->setGeometry(QRect(610, 210, 381, 91));
+        table_payment = new QTableView(tab_7);
+        table_payment->setObjectName(QString::fromUtf8("table_payment"));
+        table_payment->setGeometry(QRect(210, 371, 561, 141));
+        total = new QLineEdit(tab_7);
+        total->setObjectName(QString::fromUtf8("total"));
+        total->setEnabled(false);
+        total->setGeometry(QRect(500, 320, 113, 22));
+        label_44 = new QLabel(tab_7);
+        label_44->setObjectName(QString::fromUtf8("label_44"));
+        label_44->setGeometry(QRect(450, 320, 55, 16));
+        label_51 = new QLabel(tab_7);
+        label_51->setObjectName(QString::fromUtf8("label_51"));
+        label_51->setGeometry(QRect(-120, 20, 261, 401));
+        label_51->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        tabWidget_2->addTab(tab_7, QString());
+        tab_8 = new QWidget();
+        tab_8->setObjectName(QString::fromUtf8("tab_8"));
+        pushButton_18 = new QPushButton(tab_8);
+        pushButton_18->setObjectName(QString::fromUtf8("pushButton_18"));
+        pushButton_18->setGeometry(QRect(20, 140, 93, 28));
+        par_capacite = new QPushButton(tab_8);
+        par_capacite->setObjectName(QString::fromUtf8("par_capacite"));
+        par_capacite->setGeometry(QRect(630, 110, 93, 28));
+        pushButton_20 = new QPushButton(tab_8);
+        pushButton_20->setObjectName(QString::fromUtf8("pushButton_20"));
+        pushButton_20->setGeometry(QRect(530, 200, 93, 28));
+        label_29 = new QLabel(tab_8);
+        label_29->setObjectName(QString::fromUtf8("label_29"));
+        label_29->setGeometry(QRect(330, 10, 831, 31));
+        label_29->setStyleSheet(QString::fromUtf8("font: 75 10pt \"Segoe Print\";\n"
+"background-color: rgb(255, 211, 49);"));
+        label_30 = new QLabel(tab_8);
+        label_30->setObjectName(QString::fromUtf8("label_30"));
+        label_30->setGeometry(QRect(180, 160, 161, 21));
+        label_30->setStyleSheet(QString::fromUtf8("font: 75 10pt \"MS Shell Dlg 2\";"));
+        lineEdit_13 = new QLineEdit(tab_8);
+        lineEdit_13->setObjectName(QString::fromUtf8("lineEdit_13"));
+        lineEdit_13->setGeometry(QRect(350, 160, 113, 22));
+        label_22 = new QLabel(tab_8);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setGeometry(QRect(510, 120, 101, 16));
+        label_52 = new QLabel(tab_8);
+        label_52->setObjectName(QString::fromUtf8("label_52"));
+        label_52->setGeometry(QRect(-120, 20, 261, 401));
+        label_52->setPixmap(QPixmap(QString::fromUtf8("../../../okey25.png")));
+        tabWidget_2->addTab(tab_8, QString());
+        tabWidget->addTab(tab_2, QString());
+        MainWindow->setCentralWidget(centralwidget);
+        menubar = new QMenuBar(MainWindow);
+        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 1191, 26));
+        MainWindow->setMenuBar(menubar);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        MainWindow->setStatusBar(statusbar);
+
+        retranslateUi(MainWindow);
+
+        tabWidget->setCurrentIndex(1);
+        tabWidget_2->setCurrentIndex(1);
+        tabWidget_3->setCurrentIndex(0);
+
+
+        QMetaObject::connectSlotsByName(MainWindow);
+    } // setupUi
+
+    void retranslateUi(QMainWindow *MainWindow)
+    {
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Bienvenue", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "Identifiant", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Mot de passe", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Se connecter", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "Mot de passe oublier ?", nullptr));
+        label_12->setText(QString());
+        label->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Acceuil", nullptr));
+        label_13->setText(QCoreApplication::translate("MainWindow", "Nom", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "Adresse", nullptr));
+        label_15->setText(QCoreApplication::translate("MainWindow", "Nombre d'\303\251toiles", nullptr));
+        label_16->setText(QCoreApplication::translate("MainWindow", "Nombre des chambres ", nullptr));
+        label_17->setText(QCoreApplication::translate("MainWindow", "Note", nullptr));
+        le_nom->setText(QString());
+        pb_ajouter->setText(QCoreApplication::translate("MainWindow", "Ajouter", nullptr));
+        pb_annuler->setText(QCoreApplication::translate("MainWindow", "Annuler", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
+        label_37->setText(QCoreApplication::translate("MainWindow", "Identifiant", nullptr));
+        pb_modifier->setText(QCoreApplication::translate("MainWindow", "Modifier", nullptr));
+        label_38->setText(QCoreApplication::translate("MainWindow", "Identifiant", nullptr));
+        pb_supprimer->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
+        label_39->setText(QCoreApplication::translate("MainWindow", "Ajouter votre hebergement", nullptr));
+        label_24->setText(QCoreApplication::translate("MainWindow", "Prix", nullptr));
+        label_45->setText(QString());
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Ajoutter un h\303\251bergement", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "H\303\251bergement", nullptr));
+        label_19->setText(QCoreApplication::translate("MainWindow", "Identifiant", nullptr));
+        pb_rechercher->setText(QCoreApplication::translate("MainWindow", "Rechecher", nullptr));
+        pushButton_21->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "choisir", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "identifiant", nullptr));
+
+        label_40->setText(QCoreApplication::translate("MainWindow", "Tri par=====>", nullptr));
+        pb_annuler_2->setText(QCoreApplication::translate("MainWindow", "annuler", nullptr));
+        label_46->setText(QString());
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_5), QCoreApplication::translate("MainWindow", "Affichage", nullptr));
+        label_2->setText(QString());
+        label_41->setText(QCoreApplication::translate("MainWindow", "numero de reservation", nullptr));
+        pb_ajouter_2->setText(QCoreApplication::translate("MainWindow", "Ajouter", nullptr));
+        label_42->setText(QCoreApplication::translate("MainWindow", "date debut", nullptr));
+        label_43->setText(QCoreApplication::translate("MainWindow", "date fin", nullptr));
+        le_modifier_2->setText(QCoreApplication::translate("MainWindow", "Modifier", nullptr));
+        pb_reservation->setText(QCoreApplication::translate("MainWindow", "R\303\251server", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "Calendrier", nullptr));
+        label_33->setText(QString());
+        pushButton_12->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "la periode", nullptr));
+        label_47->setText(QString());
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_9), QCoreApplication::translate("MainWindow", "Reserver", nullptr));
+        label_48->setText(QString());
+        label_31->setText(QCoreApplication::translate("MainWindow", "Calendrier", nullptr));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_10), QCoreApplication::translate("MainWindow", "Afficher", nullptr));
+        pb_supprimer_2->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
+        label_49->setText(QString());
+        label_32->setText(QCoreApplication::translate("MainWindow", "Calendrier", nullptr));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_11), QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Calendrier", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", "Map", nullptr));
+        pushButton_15->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
+        pb_map->setText(QCoreApplication::translate("MainWindow", "cliquer pou avoir la map", nullptr));
+        label_50->setText(QString());
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Map", nullptr));
+        label_25->setText(QCoreApplication::translate("MainWindow", "Paiement", nullptr));
+        label_26->setText(QCoreApplication::translate("MainWindow", "PRIX", nullptr));
+        label_27->setText(QCoreApplication::translate("MainWindow", "Nombre des chambre a r\303\251server", nullptr));
+        label_28->setText(QCoreApplication::translate("MainWindow", "PERIODE", nullptr));
+        pb_reserve->setText(QCoreApplication::translate("MainWindow", "R\303\251server", nullptr));
+        pushButton_17->setText(QCoreApplication::translate("MainWindow", "Quiter", nullptr));
+        label_44->setText(QCoreApplication::translate("MainWindow", "total", nullptr));
+        label_51->setText(QString());
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QCoreApplication::translate("MainWindow", "Paiement", nullptr));
+        pushButton_18->setText(QCoreApplication::translate("MainWindow", "Quiter", nullptr));
+        par_capacite->setText(QCoreApplication::translate("MainWindow", "Par capacite", nullptr));
+        pushButton_20->setText(QCoreApplication::translate("MainWindow", "Trier", nullptr));
+        label_29->setText(QCoreApplication::translate("MainWindow", "Statistique", nullptr));
+        label_30->setText(QCoreApplication::translate("MainWindow", "Nom d'h\303\251bergement", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "statistique", nullptr));
+        label_52->setText(QString());
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_8), QCoreApplication::translate("MainWindow", "Statistique", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Gestion d'hebergement", nullptr));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class MainWindow: public Ui_MainWindow {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_MAINWINDOW_H
