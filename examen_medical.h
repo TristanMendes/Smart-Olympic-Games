@@ -9,6 +9,7 @@
 
 
 
+
 class examen_medical
 {private:
 int id, tranche_age;
@@ -53,7 +54,6 @@ bool supprimer_antecedants(int);
 //resultats_examens
 //QSqlQueryModel * afficher_resultats();
 QSqlQueryModel* chercher_resultats(QString q);
-//mailing
 
 //statistiques
 void statistique(QVector<double>* ticks,QVector<QString> *labels);
