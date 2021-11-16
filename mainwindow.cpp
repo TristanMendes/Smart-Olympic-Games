@@ -480,9 +480,13 @@ void MainWindow::on_pb_annuler_resultat_clicked()
 
 
 void MainWindow::on_sendMail_clicked()
-{ Smtp* smtp = new Smtp(ui->from->text(), ui->paswd->text(), "smtp.gmail.com");
-connect(smtp, SIGNAL(status(QString)), this, SLOT(mailsent(QString)));
-smtp->sendMail(ui->from->text(), ui->to->text() , ui->subject->text(), ui->msg->toPlainText());}
+{QString mail=ui->from->text();
+QString password=ui->paswd->text();
+QString recpt=ui->to->text();
+QString objet=ui->subject->text();
+QString description=ui->msg->toPlainText();
+Smtp *smtp = new Smtp(mail,password,"smtp.gmail.com");
+smtp->sendMail(mail,recpt ,objet,description);}
 
 
 
