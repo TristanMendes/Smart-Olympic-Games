@@ -1,6 +1,12 @@
 QT       += core gui sql
+QT       += core gui charts
+QR       += printsupport
+QT       += widgets
+QT       += network
+QT       += serialport
+QT       += multimedia
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++11
 
@@ -9,6 +15,8 @@ CONFIG += c++11
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
+
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -19,12 +27,16 @@ SOURCES += \
     connexion.cpp \
     examen_medical.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qcustomplot.cpp \
+    smtp.cpp
 
 HEADERS += \
     connexion.h \
     examen_medical.h \
-    mainwindow.h
+    mainwindow.h \
+    qcustomplot.h \
+    smtp.h
 
 FORMS += \
     mainwindow.ui
