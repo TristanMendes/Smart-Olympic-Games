@@ -3,27 +3,22 @@
 #include "moyensdetransport.h"
 
 
-#include <QMessageBox>
+#include <QMessageBox>          //afficher des messages
 #include <QIntValidator>
-#include <QtDebug>
-#include <QPlainTextEdit>
+#include <QtDebug>  //correction en affichant des messages
+#include <QPlainTextEdit> // permet de visualiser et éditer les texts bruts/optimisé pour les doc volumineux
 #include <QSqlQuery>
 
-#include <QTextStream>
-#include <QPainter>
-#include <QTextStream>
+#include <QTextStream> //fournit une interface pratique pour lire et écrire du texte
+#include <QPainter>  //effectue une peinture de bas niveau sur les widgets et autres périphériques de peinture
 
-#include <QFileDialog>
-#include <QTextDocument>
+
+#include <QFileDialog>  //La classe QFileDialog fournit une boîte de dialogue qui permet aux utilisateurs de sélectionner des fichiers ou des répertoires.
+#include <QTextDocument>  //contient du texte formaté
 #include <QtPrintSupport/QPrinter>
-#include <QFileDialog>
-#include <QTextDocument>
-#include<QtPrintSupport/QPrinter>
-#include<QtPrintSupport/QPrintDialog>
-#include "qcustomplot.h"
 
-
-
+#include<QtPrintSupport/QPrintDialog> //est un périphérique de peinture qui peint sur une imprimante.
+#include "qcustomplot.h" // un widget Qt C++ pour le traçage et la visualisation des données.
 
 
 
@@ -35,9 +30,60 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
+
+    QBarSet *set0=new QBarSet("Voiture");
+    QBarSet *set1=new QBarSet("Train");
+    QBarSet *set2=new QBarSet("Avion");
+    QBarSet *set3=new QBarSet("Bus");
+    QBarSet *set4=new QBarSet("Bateau");
+
+    *set0<<1<<3<<4<<2;
+    *set1<<2<<4;
+    *set2<<1<<3;
+    *set3<<3<<2<<1;
+    *set4<<4<<1<<3;
+
+    QBarSeries *series= new QBarSeries();
+    series->append(set0);
+     series->append(set1);
+      series->append(set2);
+       series->append(set3);
+        series->append(set4);
+
+
+      QChart *chart =new QChart();
+      chart->addSeries(series);
+      chart->setTitle("Moyens de transport");
+       chart->setAnimationOptions(QChart::SeriesAnimations);
+
+       QStringList categories;
+       categories <<"Jour 1"<<"Jour 2"<<"Jour 3"<<"Jour 4"<<"Jour 5"<<"Jour 6"<<"Jour 7";
+       QBarCategoryAxis *axis=new QBarCategoryAxis();
+       axis->append(categories);
+       chart->createDefaultAxes();
+       chart->setAxisX (axis,series);
+       QChartView *chartView=new QChartView(chart);
+       chartView->setParent(ui->horizontalFrame);
+
+
+
+
+
+
+
+
+
+
     ui->plot->addGraph();
+    ui->plot->xAxis->setRange(0,7);
+    ui->plot->yAxis->setRange(0,500);
+    ui->plot->setInteractions(QCP::iRangeDrag |QCP::iRangeZoom|QCP::iSelectPlottables);
+
     ui->plot->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);  //points
-    ui->plot->graph(0)->setLineStyle(QCPGraph::lsNone);   //No line
+    ui->plot->graph(0)->setLineStyle(QCPGraph::lsLine);   // line
+   /* ui->plot->xAxis->setRange(0,1000);
+    ui->plot->yAxis->setRange(0,1000);
+    ui->plot->setInteractions(QCP::iRangeDrag |QCP::iRangeZoom|QCP::iSelectPlottables);*/
 
 
      ui->customPlot->replot();
@@ -52,81 +98,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 
-     QLinearGradient gradient(0, 0, 0, 400);
-                   gradient.setColorAt(0, QColor(90, 90, 90));
-                   gradient.setColorAt(0.38, QColor(105, 105, 105));
-                   gradient.setColorAt(1, QColor(70, 70, 70));
-                   ui->customPlot->setBackground(QBrush(gradient));
-
-
-                   // create empty bar chart objects:
-                   QCPBars *amande = new QCPBars(ui->customPlot->xAxis, ui->customPlot->yAxis);
-                   amande->setAntialiased(false);
-                   amande->setStackingGap(1);
-                    //set names and colors:
-                   amande->setName("Le nombre de billets en fonction des moyens de transport ");
-                   amande->setPen(QPen(QColor(0, 168, 140).lighter(130)));
-                   amande->setBrush(QColor(0, 168, 140));
-                   // stack bars on top of each other:
-
-                   // prepare x axis with country labels:
-                   QVector<double> ticks;
-                   QVector<QString> labels;
-                   M.statistique(&ticks,&labels);
-                   QSharedPointer<QCPAxisTickerText> textTicker(new QCPAxisTickerText);
-                                 textTicker->addTicks(ticks, labels);
-                                 ui->customPlot->xAxis->setTicker(textTicker);
-                                 ui->customPlot->xAxis->setTickLabelRotation(60);
-                                 ui->customPlot->xAxis->setSubTicks(false);
-                                 ui->customPlot->xAxis->setTickLength(0, 4);
-                                 ui->customPlot->xAxis->setRange(0, 8);
-                                 ui->customPlot->xAxis->setBasePen(QPen(Qt::white));
-                                 ui->customPlot->xAxis->setTickPen(QPen(Qt::white));
-                                 ui->customPlot->xAxis->grid()->setVisible(true);
-                                 ui->customPlot->xAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
-                                 ui->customPlot->xAxis->setTickLabelColor(Qt::white);
-                                 ui->customPlot->xAxis->setLabelColor(Qt::white);
-
-
-
-
-                                 // prepare y axis:
-                                              ui->customPlot->yAxis->setRange(0,10);
-                                              ui->customPlot->yAxis->setPadding(5); // a bit more space to the left border
-                                              ui->customPlot->yAxis->setLabel("Statistiques");
-                                              ui->customPlot->yAxis->setBasePen(QPen(Qt::white));
-                                              ui->customPlot->yAxis->setTickPen(QPen(Qt::white));
-                                              ui->customPlot->yAxis->setSubTickPen(QPen(Qt::white));
-                                              ui->customPlot->yAxis->grid()->setSubGridVisible(true);
-                                              ui->customPlot->yAxis->setTickLabelColor(Qt::white);
-                                              ui->customPlot->yAxis->setLabelColor(Qt::white);
-                                              ui->customPlot->yAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::SolidLine));
-                                              ui->customPlot->yAxis->grid()->setSubGridPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
-
-
-
-                                              // Add data:
-
-                                                            QVector<double> PlaceData;
-                                                            QSqlQuery q1("select nbr_billet from Moyens_De_Transport");
-                                                            while (q1.next()) {
-                                                                          int  nbr = q1.value(0).toInt();
-                                                                          PlaceData<< nbr;
-                                                                            }
-                                                            amande->setData(ticks, PlaceData);
-
-
-
-
-                                                            // setup legend:
-                                                                         ui->customPlot->legend->setVisible(true);
-                                                                         ui->customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
-                                                                         ui->customPlot->legend->setBrush(QColor(255, 255, 255, 100));
-                                                                         ui->customPlot->legend->setBorderPen(Qt::NoPen);
-                                                                         QFont legendFont = font();
-                                                                         legendFont.setPointSize(5);//888//
-                                                                         ui->customPlot->legend->setFont(legendFont);
-                                                                         ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 
 
 
@@ -539,7 +510,7 @@ QMessageBox::information(nullptr, QObject::tr("Generer un QR Code"),
 
 void MainWindow::addPoint(double x, double y)
 {
-qv_x.append(x);
+qv_x.append(x);   //1)voiture prive /2)train /3)bus /4)Metro/5)Avion/6)Bateau/7)Jet prive
 qv_y.append(y);
 }
 
@@ -551,7 +522,10 @@ qv_y.clear();
 
 void MainWindow::plot()
 {
+
 ui->plot->graph(0)->setData(qv_x,qv_y);
+
+
 ui->plot->replot();
 ui->plot->update();
 }

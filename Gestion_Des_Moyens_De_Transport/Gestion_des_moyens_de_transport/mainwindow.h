@@ -5,6 +5,10 @@
 #include <QMainWindow>
 #include "moyensdetransport.h"
 #include "qcustomplot.h"
+#include <QtCharts>
+#include <QChartView>
+#include <QBarSet>
+#include <QBarSeries>
 
 
 
