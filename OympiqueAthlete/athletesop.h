@@ -5,14 +5,18 @@
 #include <QSqlQueryModel>
 
 
+
 class athletesOP
 {
 private:
     int id,age;
     QString nom,prenom,sexe,nationalite,specialite,mail;
+
+    QString time;
 public:
     athletesOP();
-    athletesOP(int,int,QString,QString,QString,QString,QString,QString);
+    athletesOP(int,int,QString,QString,QString,QString,QString,QString,QString);
+
 
     //getters
     QString get_nom(){return nom;}
@@ -21,6 +25,7 @@ public:
     QString get_nationalite(){return nationalite;}
     QString get_specialite(){return specialite;}
     QString get_mail(){return mail;}
+    QString get_time(){return time;}
     int get_id(){return id;}
     int get_age(){return age;}
 
@@ -31,12 +36,13 @@ public:
     void set_nationalite(QString nt){nationalite=nt;}
     void set_specilaite(QString sp){specialite=sp;}
     void set_mail(QString m){mail=m;}
+    void set_time(QString t){time=t;}
     void set_id(int ids){this->id=ids;}
     void set_age(int a){this->age=a;}
 
     bool ajouter();
     bool Nomtest(QString nom);
-   // bool Prenomtest(QString prenom);
+
     bool supprimer(int);
     QSqlQueryModel* afficher();
     bool modifier(int);
@@ -45,6 +51,8 @@ public:
     QSqlQueryModel* trier_age();
     QSqlQueryModel* trier_nationalite();
     QSqlQueryModel* trier_specialite();
+    QSqlQueryModel* stat();
+
 
 };
 

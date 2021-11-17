@@ -1,7 +1,11 @@
 #include "athletesop.h"
 #include <QSqlQuery>
+#include <QSqlQueryModel>
 #include <QDebug>
 #include <QObject>
+#include <QTextStream>
+#include <QPainter>
+#include <QTextStream>
 
 
 athletesOP::athletesOP()
@@ -14,9 +18,11 @@ athletesOP::athletesOP()
   nationalite=" ";
   specialite=" ";
   mail=" ";
+  time=" ";
+
 }
 
-athletesOP::athletesOP(int id,int age,QString nom,QString prenom,QString sexe,QString nationalite,QString specialite,QString mail)
+athletesOP::athletesOP(int id,int age,QString nom,QString prenom,QString sexe,QString nationalite,QString specialite,QString mail,QString time)
 {
     this->id=id;
     this->age=age;
@@ -26,7 +32,11 @@ athletesOP::athletesOP(int id,int age,QString nom,QString prenom,QString sexe,QS
     this->nationalite=nationalite;
     this->specialite=specialite;
     this->mail=mail;
+    this->time=time;
+
 }
+
+
 
 bool athletesOP::ajouter()
 {
@@ -35,9 +45,9 @@ bool athletesOP::ajouter()
 
     QString id_string=QString::number(id);
     QString res=QString::number(age);
-    query.prepare("INSERT INTO aolympiqueathlete (id, age, nom, prenom, sexe, nationalite, specialite, mail) "
-                  "VALUES (:id, :age, :nom, :prenom, :sexe, :nationalite, :specialite, :mail)");
-    query.bindValue(":id", id_string);
+    query.prepare("INSERT INTO aolympiqueathlete (id, age, nom, prenom, sexe, nationalite, specialite, mail, time) "
+                  "VALUES (:id, :age, :nom, :prenom, :sexe, :nationalite, :specialite, :mail, :time)");
+    query.bindValue(0, id_string);
     query.bindValue(":age", res);
     query.bindValue(":nom", nom);
     query.bindValue(":prenom", prenom);
@@ -45,6 +55,8 @@ bool athletesOP::ajouter()
     query.bindValue(":nationalite", nationalite);
     query.bindValue(":specialite", specialite);
     query.bindValue(":mail", mail);
+    query.bindValue(":time", time);
+
     return query.exec();
 
 }
@@ -73,6 +85,7 @@ QSqlQueryModel* athletesOP::afficher()
          model->setHeaderData(5, Qt::Horizontal, QObject::tr("Nationalité"));
          model->setHeaderData(6, Qt::Horizontal, QObject::tr("Specialite"));
          model->setHeaderData(7, Qt::Horizontal, QObject::tr("Mail"));
+         model->setHeaderData(8, Qt::Horizontal, QObject::tr("time"));
 
 
 
@@ -90,15 +103,7 @@ bool athletesOP::Nomtest(QString nom)
     return true;
 }
 
-/*bool athletesOP::Prenomtest(QString prenom)
-{
-    for(int i=0; i<prenom.size();i++)
-    {
-        if(prenom[i]=='@' || prenom[i]=='#' ||prenom[i]=='$' || prenom[i]=='*'|| prenom[i]=='&' || prenom[i]=='+' || prenom[i]=='-' || prenom[i]=='.' || prenom[i]=='?' || prenom[i]=='/'|| prenom[i]==';' || prenom[i]=='!' || prenom[i]=='%' || prenom[i]=='>'|| prenom[i]=='<' || prenom[i]=='=')
-            return false;
-    }
-    return true;
-}*/
+
 
 bool athletesOP::modifier(int id)
 {
@@ -117,6 +122,8 @@ bool athletesOP::modifier(int id)
      query.bindValue(":nationalite", nationalite);
      query.bindValue(":specialite", specialite);
      query.bindValue(":mail", mail);
+     query.bindValue(":time", time);
+
 
      return query.exec();
 }
@@ -140,34 +147,25 @@ QSqlQueryModel* athletesOP::recherche(int id)
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Nationalite"));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("specialite"));
     model->setHeaderData(7, Qt::Horizontal, QObject::tr("Mail"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("time"));
 
         return model;
     }
 
-/*QSqlQueryModel* athletesOP::rechercheNom(QString nom)
+
+
+/*QSqlQueryModel * athletesOP::rechercheNom(QString nom)
 {
-    QSqlQueryModel* model=new QSqlQueryModel();
-    QSqlQuery query;
-    query.bindValue(":nom", nom);
+   QSqlQueryModel * model= new QSqlQueryModel();
+QSqlQuery query;
 
-    // QString res=QString::number(id);  //SQLQUERY ONLY TAKES STRING ENTRIES.
+query.prepare("select * from aolympiqueathlete where nom=:nom");
+query.bindValue(":nom", nom);
 
-     query.prepare("SELECT * from aolympiqueathlete where nom=:nom");
-     //query.bindValue(":id",res);
-     query.exec();
-     model->setQuery(query);
-     model->setHeaderData(0, Qt::Horizontal, QObject::tr("identifiant"));
-     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Age"));
-     model->setHeaderData(2, Qt::Horizontal, QObject::tr("Nom"));
-     model->setHeaderData(3, Qt::Horizontal, QObject::tr("Prenom"));
-     model->setHeaderData(4, Qt::Horizontal, QObject::tr("Sexe"));
-     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Nationalite"));
-     model->setHeaderData(6, Qt::Horizontal, QObject::tr("specialite"));
-     model->setHeaderData(7, Qt::Horizontal, QObject::tr("Mail"));
-
-         return model;
-
+return model;
 }*/
+
+
 
 QSqlQueryModel* athletesOP::trier_age()
 {
@@ -183,6 +181,7 @@ QSqlQueryModel* athletesOP::trier_age()
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Nationalite"));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("specialite"));
     model->setHeaderData(7, Qt::Horizontal, QObject::tr("mail"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("time"));
 
     return model;
 }
@@ -201,6 +200,7 @@ QSqlQueryModel* athletesOP::trier_nationalite()
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Nationalite"));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("specialite"));
     model->setHeaderData(7, Qt::Horizontal, QObject::tr("mail"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("time"));
 
     return model;
 
@@ -220,6 +220,23 @@ QSqlQueryModel* athletesOP::trier_specialite()
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("Nationalite"));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("specialite"));
     model->setHeaderData(7, Qt::Horizontal, QObject::tr("mail"));
+    model->setHeaderData(8, Qt::Horizontal, QObject::tr("time"));
 
     return model;
 }
+
+
+QSqlQueryModel * athletesOP::stat()
+{
+    QSqlQueryModel *model=new QSqlQueryModel();
+    model->setQuery("select sexe,count(*) from aolympiqueathlete group by sexe");
+
+         model->setHeaderData(0,Qt::Horizontal,QObject::tr("SEXE"));
+         model->setHeaderData(1,Qt::Horizontal,QObject::tr("NOMBRE"));
+
+        return model;
+}
+
+
+
+

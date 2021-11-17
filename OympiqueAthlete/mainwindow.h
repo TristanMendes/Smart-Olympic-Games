@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "athletesop.h"
+#include <QSystemTrayIcon>
+#include <QDialog>
+#include <QFile>
+#include<QTextStream>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +33,13 @@ private slots:
 
 
     void on_comboBox_trierath_currentIndexChanged(int index);
+
+
+    void on_bouton_PDF_clicked();
+
+
+
+    void on_bouton_excel_clicked();
 
 private:
     Ui::MainWindow *ui;

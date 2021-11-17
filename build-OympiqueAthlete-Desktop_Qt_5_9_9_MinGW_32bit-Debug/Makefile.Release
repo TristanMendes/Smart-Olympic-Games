@@ -222,6 +222,12 @@ release/moc_mainwindow.cpp: C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMa
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQueryModel \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquerymodel.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QSystemTrayIcon \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qsystemtrayicon.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QFile \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTextStream \
 		../OympiqueAthlete/mainwindow.h \
 		release/moc_predefs.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/bin/moc.exe
@@ -319,7 +325,37 @@ release/athletesop.o: ../OympiqueAthlete/athletesop.cpp ../OympiqueAthlete/athle
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QDebug \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QObject
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QObject \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTextStream \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QPainter \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpainter.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtguiglobal.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtgui-config.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qrect.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmargins.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qsize.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpixmap.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qcolor.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qrgb.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qrgba64.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qimage.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpixelformat.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtransform.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qmatrix.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpolygon.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qregion.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdatastream.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qline.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpainterpath.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtextoption.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qbrush.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qfontinfo.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qfont.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qfontmetrics.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\athletesop.o ..\OympiqueAthlete\athletesop.cpp
 
 release/connection.o: ../OympiqueAthlete/connection.cpp ../OympiqueAthlete/connection.h \
@@ -472,6 +508,12 @@ release/main.o: ../OympiqueAthlete/main.cpp ../OympiqueAthlete/mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQueryModel \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquerymodel.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QSystemTrayIcon \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qsystemtrayicon.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QFile \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTextStream \
 		../OympiqueAthlete/connection.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlError \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlerror.h \
@@ -485,8 +527,7 @@ release/main.o: ../OympiqueAthlete/main.cpp ../OympiqueAthlete/mainwindow.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qguiapplication.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qinputmethod.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMessageBox \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmessagebox.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\OympiqueAthlete\main.cpp
 
 release/mainwindow.o: ../OympiqueAthlete/mainwindow.cpp ../OympiqueAthlete/mainwindow.h \
@@ -601,16 +642,102 @@ release/mainwindow.o: ../OympiqueAthlete/mainwindow.cpp ../OympiqueAthlete/mainw
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQueryModel \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquerymodel.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		ui_mainwindow.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMessageBox \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmessagebox.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QSystemTrayIcon \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qsystemtrayicon.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QDialog \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdialog.h \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QIntValidator \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QFile \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QTextStream \
+		ui_mainwindow.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QVariant \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QAction \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qaction.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QApplication \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qapplication.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qeventloop.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qguiapplication.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qinputmethod.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QComboBox \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qcombobox.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstyleoption.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractspinbox.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qvalidator.h \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qregularexpression.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qslider.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstyle.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabbar.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QGroupBox \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qgroupbox.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QHeaderView \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qheaderview.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QLabel \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qlabel.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtextcursor.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtextformat.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtextoption.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMenuBar \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmenu.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QPushButton \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QStatusBar \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QTabWidget \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QTableView \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtableview.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QTimeEdit \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qdatetimeedit.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdatetime.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QWidget \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMessageBox \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmessagebox.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QIntValidator \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QDebug \
 		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/QSqlQuery \
-		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql/qsqlquery.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/QPrintDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/qprintdialog.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/qtprintsupportglobal.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/qtprintsupport-config.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/qabstractprintdialog.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/QPrinterInfo \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/qprinterinfo.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/qprinter.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpagedpaintdevice.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpagelayout.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpagesize.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QList \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QPair \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QPainter \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpainter.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QFileDialog \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qfiledialog.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qdir.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qfileinfo.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QTextDocument \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qtextdocument.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtPrintSupport/QPrinter \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QPdfWriter \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qpdfwriter.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/QDesktopServices \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qdesktopservices.h \
+		C:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qstandardpaths.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\OympiqueAthlete\mainwindow.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 

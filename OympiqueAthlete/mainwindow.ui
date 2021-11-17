@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
-      <width>781</width>
-      <height>521</height>
+      <y>20</y>
+      <width>771</width>
+      <height>571</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -189,8 +189,8 @@ color: rgb(85, 85, 255);</string>
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>761</width>
-        <height>471</height>
+        <width>811</width>
+        <height>511</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -201,7 +201,7 @@ color: rgb(85, 85, 255);</string>
       </property>
       <widget class="QWidget" name="tab_11">
        <attribute name="title">
-        <string>Ajouter</string>
+        <string>Ajouter/Modifier</string>
        </attribute>
        <widget class="QLineEdit" name="lineEdit_ID_3">
         <property name="geometry">
@@ -588,8 +588,8 @@ border-radius: 10px
        <widget class="QLabel" name="label_nom_test">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>369</y>
+          <x>150</x>
+          <y>400</y>
           <width>381</width>
           <height>31</height>
          </rect>
@@ -610,6 +610,83 @@ border-radius: 10px
         <property name="text">
          <string/>
         </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>350</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Planning</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_heure">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>350</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:black;
+border-color: rgb(222, 255, 52);
+background-color: rgb(255, 255, 255);
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+border-style:outset;
+border-width: 2px;
+border-radius: 10px
+</string>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>13:30</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>14:00</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>14:30</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>15:00</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>15:30</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>16:30</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>17:00</string>
+         </property>
+        </item>
        </widget>
        <zorder>label_5</zorder>
        <zorder>lineEdit_ID_3</zorder>
@@ -632,6 +709,8 @@ border-radius: 10px
        <zorder>pushButton_Modifierath</zorder>
        <zorder>label_nom_test</zorder>
        <zorder>label_prenom_test</zorder>
+       <zorder>label_9</zorder>
+       <zorder>comboBox_heure</zorder>
       </widget>
       <widget class="QWidget" name="tab_12">
        <attribute name="title">
@@ -640,14 +719,14 @@ border-radius: 10px
        <widget class="QGroupBox" name="groupBox_2">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>30</y>
-          <width>791</width>
-          <height>411</height>
+          <x>-40</x>
+          <y>40</y>
+          <width>741</width>
+          <height>211</height>
          </rect>
         </property>
         <property name="title">
-         <string>AFFICHAGE-SUPPRESSION</string>
+         <string>CHAMPS A REMPLIR</string>
         </property>
         <widget class="QLabel" name="label_42">
          <property name="geometry">
@@ -681,6 +760,9 @@ color:black;
 border-style:outset;
 border-width: 2px;
 border-radius: 10px</string>
+         </property>
+         <property name="text">
+          <string/>
          </property>
         </widget>
         <widget class="QPushButton" name="boutton_supprimerath">
@@ -760,16 +842,6 @@ font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
           <string>Trier</string>
          </property>
         </widget>
-        <widget class="QTableView" name="table_athletes_2">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>160</y>
-           <width>751</width>
-           <height>251</height>
-          </rect>
-         </property>
-        </widget>
         <widget class="QLineEdit" name="lineEdit_rechercher">
          <property name="geometry">
           <rect>
@@ -809,14 +881,70 @@ border-radius: 10px
           <string>Rechercher</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="bouton_PDF">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>140</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:black;
+border-color: rgb(222, 255, 52);
+background-color: rgb(255, 255, 255);
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+border-style:outset;
+border-width: 2px;
+border-radius: 10px
+</string>
+         </property>
+         <property name="text">
+          <string>exporter pdf</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="bouton_excel">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>140</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:black;
+border-color: rgb(222, 255, 52);
+background-color: rgb(255, 255, 255);
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+border-style:outset;
+border-width: 2px;
+border-radius: 10px
+</string>
+         </property>
+         <property name="text">
+          <string>EXCEL</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTableView" name="table_athletes_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>260</y>
+          <width>761</width>
+          <height>181</height>
+         </rect>
+        </property>
        </widget>
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>-20</x>
-          <y>-30</y>
-          <width>791</width>
-          <height>501</height>
+          <x>-10</x>
+          <y>-100</y>
+          <width>811</width>
+          <height>641</height>
          </rect>
         </property>
         <property name="text">
@@ -828,274 +956,11 @@ border-radius: 10px
        </widget>
        <zorder>label_6</zorder>
        <zorder>groupBox_2</zorder>
-      </widget>
-      <widget class="QWidget" name="tab_13">
-       <attribute name="title">
-        <string>Modifier</string>
-       </attribute>
-       <widget class="QLineEdit" name="lineEdit_ID_mo">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>30</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px
-</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_34">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>170</y>
-          <width>47</width>
-          <height>14</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nom</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_35">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Identifiant</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_Nom_mo">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>180</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_36">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>260</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Prenom</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_Prenom_mo">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>270</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_Age_mo">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>100</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_37">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>100</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 63 italic 12pt &quot;Lucida Fax&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Age</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_nationalite_4">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>30</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_38">
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Nationalite</string>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox_sexe_4">
-        <property name="geometry">
-         <rect>
-          <x>481</x>
-          <y>100</y>
-          <width>111</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-        <item>
-         <property name="text">
-          <string/>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Masculin</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Feminin</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Autrs</string>
-         </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_39">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>110</y>
-          <width>47</width>
-          <height>14</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>sexe</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_40">
-        <property name="geometry">
-         <rect>
-          <x>360</x>
-          <y>170</y>
-          <width>91</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>specialite</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_specialite_4">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>170</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_mail_4">
-        <property name="geometry">
-         <rect>
-          <x>490</x>
-          <y>250</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color:black;
-border-style:outset;
-border-width: 2px;
-border-radius: 10px</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_41">
-        <property name="geometry">
-         <rect>
-          <x>396</x>
-          <y>250</y>
-          <width>61</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>mail</string>
-        </property>
-       </widget>
+       <zorder>table_athletes_2</zorder>
       </widget>
       <widget class="QWidget" name="tab_14">
        <attribute name="title">
-        <string>Supprimer</string>
+        <string>OPTIONS</string>
        </attribute>
       </widget>
      </widget>
