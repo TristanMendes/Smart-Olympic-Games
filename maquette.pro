@@ -51,3 +51,6 @@ RESOURCES += \
 
 DISTFILES += \
     ../Projet C++/Maquettes/image_fond.jpg
+
+
+
