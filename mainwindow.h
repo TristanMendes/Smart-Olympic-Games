@@ -10,7 +10,9 @@
 #include <QBarSet>
 #include <QBarSeries>
 #include <QPainter>
-#include<QtGui>
+#include <QtGui>
+#include <openssl/crypto.h>
+#include <openssl/tls1.h>
 
 
 
