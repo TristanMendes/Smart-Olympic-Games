@@ -15,6 +15,7 @@
 #include <QTextStream>
 #include <QFileDialog>
 #include <QTextDocument>
+#include<openssl/crypto.h>
 //#include <strstream>
 
 
