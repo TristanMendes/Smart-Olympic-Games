@@ -6,18 +6,7 @@
 #include <QMessageBox>          //afficher des messages
 #include <QIntValidator>
 #include <QtDebug>  //correction en affichant des messages
-#include <QPlainTextEdit> // permet de visualiser et éditer les texts bruts/optimisé pour les doc volumineux
 #include <QSqlQuery>
-
-#include <QTextStream> //fournit une interface pratique pour lire et écrire du texte
-#include <QPainter>  //effectue une peinture de bas niveau sur les widgets et autres périphériques de peinture
-
-
-#include <QFileDialog>  //La classe QFileDialog fournit une boîte de dialogue qui permet aux utilisateurs de sélectionner des fichiers ou des répertoires.
-#include <QTextDocument>  //contient du texte formaté
-#include <QtPrintSupport/QPrinter>
-
-#include<QtPrintSupport/QPrintDialog> //est un périphérique de peinture qui peint sur une imprimante.
 #include "qcustomplot.h" // un widget Qt C++ pour le traçage et la visualisation des données.
 
 
@@ -37,11 +26,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QBarSet *set3=new QBarSet("Bus");
     QBarSet *set4=new QBarSet("Bateau");
 
-    *set0<<1<<3<<4<<2;
-    *set1<<2<<4;
-    *set2<<1<<3;
-    *set3<<3<<2<<1;
-    *set4<<4<<1<<3;
+    *set0<<20<<30<<50;
+    *set1<<100<<80<<10<<30;
+    *set2<<0<<20<<30<<40;
+    *set3<<50<<0<<30<<10;
+    *set4<<30<<70<<60<<30;
 
     QBarSeries *series= new QBarSeries();
     series->append(set0);
@@ -556,3 +545,82 @@ plot();
 
 
 
+
+void MainWindow::on_B_ajouter_annuler_clicked()
+{
+          ui->le_id->clear();
+          ui->le_nom->clear();
+          ui->le_type->clear();
+          ui->le_nbr_voyages->clear();
+          ui->le_dest_dep->clear();
+          ui->le_dest_arri->clear();
+          ui->le_capacite->clear();
+          ui->le_nbr_billet->clear();
+}
+
+void MainWindow::on_B_modifier_annuler_clicked()
+{
+     ui->le_m_id->clear();
+     ui->le_m_nom->clear();
+     ui->le_m_type->clear();
+     ui->le_m_nbr_voyages->clear();
+     ui->le_m_dest_dep->clear();
+     ui->le_m_dest_arr->clear();
+     ui->le_m_capacite->clear();
+     ui->le_m_nbr_billet->clear();
+}
+
+void MainWindow::on_B_supprimer_annuler_clicked()
+{
+    ui->le_id_supp->clear();
+}
+
+void MainWindow::on_B_QR_annuler_clicked()
+{
+    ui->le_QR_id->clear();
+    ui->le_QR_nbr_billet->clear();
+    ui->le_QR_nbr_QR->clear();
+}
+
+void MainWindow::on_B_billet_annuler_clicked()
+{
+    ui->le_billet_id->clear();
+    ui->le_billet_nbr_billet_actuel->clear();
+    ui->le_billet_nbr_billet_ajouter->clear();
+}
+
+void MainWindow::on_B_choix_annuler_clicked()
+{
+  ui->le_choix_id->clear();
+}
+
+void MainWindow::on_B_excel_clicked()
+{
+    QTableView *table;
+    table = ui->tab_choix;
+    QString filters("XLS files (.xls);;All files (.*)");
+    QString defaultFilter("XLS files (*.xls)");
+    QString fileName = QFileDialog::getSaveFileName(0, "Save file", QCoreApplication::applicationDirPath(),filters, &defaultFilter);
+    QFile file(fileName);
+    QAbstractItemModel *model =  table->model();
+
+    if (file.open(QFile::WriteOnly | QFile::Truncate))
+    {QTextStream data(&file);
+    QStringList strList;
+    for (int i = 0; i < model->columnCount(); i++)
+    {if (model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString().length() > 0)
+    strList.append("\"" + model->headerData(i, Qt::Horizontal, Qt::DisplayRole).toString() + "\"");
+    else strList.append("");}
+    data << strList.join(";") << "\n";
+    for (int i = 0; i < model->rowCount(); i++)
+    {strList.clear();
+    for (int j = 0; j < model->columnCount(); j++)
+    {if (model->data(model->index(i, j)).toString().length() > 0)
+    strList.append("\"" + model->data(model->index(i, j)).toString() + "\"");
+    else strList.append("");}
+    data << strList.join(";") + "\n";}
+    file.close();
+    QMessageBox::information(nullptr, QObject::tr("Export excel"),QObject::tr("Export avec succes .\n" "Click OK to exit."),QMessageBox::Ok);}
+
+
+}

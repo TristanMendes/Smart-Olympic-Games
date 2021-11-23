@@ -318,13 +318,13 @@ background-image: url(:/fond.jpg);
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
         <string>Ajouter</string>
        </attribute>
-       <widget class="QPushButton" name="B_Annuler_Ajouter">
+       <widget class="QPushButton" name="B_ajouter_annuler">
         <property name="geometry">
          <rect>
           <x>750</x>
@@ -603,7 +603,7 @@ background-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
        <zorder>groupBox_7</zorder>
-       <zorder>B_Annuler_Ajouter</zorder>
+       <zorder>B_ajouter_annuler</zorder>
        <zorder>B_Ajouter</zorder>
        <zorder>label_3</zorder>
        <zorder>label_4</zorder>
@@ -677,7 +677,7 @@ p, li { white-space: pre-wrap; }
        <attribute name="title">
         <string>Type de modification</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_38">
+       <widget class="QPushButton" name="B_modifier_annuler">
         <property name="geometry">
          <rect>
           <x>770</x>
@@ -977,7 +977,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </widget>
        <zorder>groupBox_5</zorder>
-       <zorder>pushButton_38</zorder>
+       <zorder>B_modifier_annuler</zorder>
        <zorder>B_modifier</zorder>
        <zorder>label_10</zorder>
        <zorder>le_m_dest_dep</zorder>
@@ -1065,7 +1065,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
           <string>Supprimer</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_22">
+        <widget class="QPushButton" name="B_supprimer_annuler">
          <property name="geometry">
           <rect>
            <x>570</x>
@@ -1107,7 +1107,7 @@ p, li { white-space: pre-wrap; }
         </widget>
         <zorder>label_14</zorder>
         <zorder>B_supp</zorder>
-        <zorder>pushButton_22</zorder>
+        <zorder>B_supprimer_annuler</zorder>
         <zorder>textBrowser_8</zorder>
         <zorder>le_id_supp</zorder>
        </widget>
@@ -1132,7 +1132,7 @@ p, li { white-space: pre-wrap; }
 background-image: url(:/fond.jpg);</string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_8">
        <attribute name="title">
@@ -1225,7 +1225,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
           <string>Choisir</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_24">
+        <widget class="QPushButton" name="B_choix_annuler">
          <property name="geometry">
           <rect>
            <x>270</x>
@@ -1278,13 +1278,33 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
+        <widget class="QPushButton" name="B_excel">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>410</y>
+           <width>161</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 85, 255);
+background-color: rgb(0, 85, 255);
+color: rgb(0, 0, 0);
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Fichier excel</string>
+         </property>
+        </widget>
         <zorder>label_15</zorder>
         <zorder>le_choix_id</zorder>
         <zorder>B_choisir</zorder>
-        <zorder>pushButton_24</zorder>
+        <zorder>B_choix_annuler</zorder>
         <zorder>textBrowser_5</zorder>
         <zorder>tab_choix</zorder>
         <zorder>textBrowser_12</zorder>
+        <zorder>B_excel</zorder>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_9">
@@ -1690,7 +1710,7 @@ p, li { white-space: pre-wrap; }
          <string/>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_31">
+       <widget class="QPushButton" name="B_billet_annuler">
         <property name="geometry">
          <rect>
           <x>250</x>
@@ -1842,7 +1862,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
          <string>Identifiant:</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_37">
+       <widget class="QPushButton" name="B_QR_annuler">
         <property name="geometry">
          <rect>
           <x>280</x>
@@ -1963,10 +1983,10 @@ p, li { white-space: pre-wrap; }
        <widget class="QTextBrowser" name="textBrowser_7">
         <property name="geometry">
          <rect>
-          <x>300</x>
+          <x>420</x>
           <y>0</y>
-          <width>471</width>
-          <height>71</height>
+          <width>151</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1979,52 +1999,35 @@ background-color: rgb(85, 170, 0);</string>
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt;&quot;&gt;Voulez-vous avoir une idée sur les statistiques faits sur:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:14pt;&quot;&gt;Statistiques&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_34">
+       <widget class="QFrame" name="horizontalFrame_3">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>140</y>
-          <width>521</width>
-          <height>71</height>
+          <x>460</x>
+          <y>340</y>
+          <width>961</width>
+          <height>581</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(125, 125, 125);
-color: rgb(0, 0, 0);
-font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Le nombre de voyages effectués en fonction des moyens de transport</string>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3"/>
        </widget>
-       <widget class="QPushButton" name="B_stat_nbr_billet">
+       <widget class="QFrame" name="horizontalFrame">
         <property name="geometry">
          <rect>
-          <x>250</x>
-          <y>300</y>
-          <width>521</width>
-          <height>71</height>
+          <x>40</x>
+          <y>50</y>
+          <width>943</width>
+          <height>563</height>
          </rect>
         </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(125, 125, 125);
-color: rgb(0, 0, 0);
-font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Le nombre de billets distribués en fonction des moyens de transport</string>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2"/>
        </widget>
-       <zorder>pushButton_34</zorder>
-       <zorder>B_stat_nbr_billet</zorder>
-       <zorder>textBrowser_7</zorder>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
-        <string>Page</string>
+        <string>Stat</string>
        </attribute>
        <widget class="QCustomPlot" name="customPlot" native="true">
         <property name="geometry">
@@ -2039,7 +2042,7 @@ font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
       </widget>
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
-        <string>Page</string>
+        <string>stats</string>
        </attribute>
        <widget class="QCustomPlot" name="plot" native="true">
         <property name="geometry">
@@ -2124,22 +2127,6 @@ font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_16">
-       <attribute name="title">
-        <string>Page</string>
-       </attribute>
-       <widget class="QFrame" name="horizontalFrame">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>10</y>
-          <width>961</width>
-          <height>581</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout"/>
-       </widget>
-      </widget>
      </widget>
     </widget>
    </widget>
@@ -2169,7 +2156,7 @@ font: 75 9pt &quot;MS Shell Dlg 2&quot;;</string>
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
-   <header location="global">qcustomplot.h</header>
+   <header>qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

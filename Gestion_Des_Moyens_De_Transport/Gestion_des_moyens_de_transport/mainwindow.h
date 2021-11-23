@@ -67,6 +67,20 @@ private slots:
     void on_B_clear_clicked();
 
 
+    void on_B_ajouter_annuler_clicked();
+
+    void on_B_modifier_annuler_clicked();
+
+    void on_B_supprimer_annuler_clicked();
+
+    void on_B_QR_annuler_clicked();
+
+    void on_B_billet_annuler_clicked();
+
+    void on_B_choix_annuler_clicked();
+
+    void on_B_excel_clicked();
+
 private:
     Ui::MainWindow *ui;
     MoyensDeTransport M;
