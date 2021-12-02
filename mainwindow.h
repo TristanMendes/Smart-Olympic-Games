@@ -59,33 +59,16 @@ private slots:
     void on_pb_supprimer_antecedants_clicked();
     void on_pb_pdf_clicked();
     void on_pb_excel_clicked();
+    void on_pb_annuler_antecedants_clicked();
     //resultat
     void on_pb_resultat_clicked();
-
+    void on_pb_annuler_resultat_clicked();
     //mailing
     void on_sendMail_clicked();
     void mailsent(QString);
-    //statistiques
-    void on_b_statv_clicked();
-    void on_tabWidget_6_currentChanged(int index);
-    void on_stat_examen_clicked();
-    void on_pb_stat_clicked();
 
 
 
-
-
-
-
-
-
-
-
-
-
-    void on_pb_annuler_antecedants_clicked();
-
-    void on_pb_annuler_resultat_clicked();
 
 private:
     Ui::MainWindow *ui;
