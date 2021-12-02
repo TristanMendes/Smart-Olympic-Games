@@ -52,12 +52,8 @@ bool ajouter_antecedants(int, QString, QString, QString, QString);
 QSqlQueryModel* afficher_antecedants();
 bool supprimer_antecedants(int);
 //resultats_examens
-//QSqlQueryModel * afficher_resultats();
 QSqlQueryModel* chercher_resultats(QString q);
 
-//statistiques
-void statistique(QVector<double>* ticks,QVector<QString> *labels);
-void statistiques(QString, QString, int, int, QString);
 };
 
 
