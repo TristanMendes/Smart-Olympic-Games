@@ -109,8 +109,7 @@ bool athletesOP::modifier(int id)
 {
      QSqlQuery query;
 
-     //QString id_string=QString::number(id);
-    // QString res=QString::number(age);
+
      query.prepare("update aolympiqueathlete set id=:id, age=:age, nom=:nom, prenom=:prenom, sexe=:sexe, nationalite=:nationalite, specialite=:specialite, mail=:mail where id=:id");
      query.bindValue(":id", id);
      //qDebug()<< id;
@@ -154,16 +153,7 @@ QSqlQueryModel* athletesOP::recherche(int id)
 
 
 
-/*QSqlQueryModel * athletesOP::rechercheNom(QString nom)
-{
-   QSqlQueryModel * model= new QSqlQueryModel();
-QSqlQuery query;
 
-query.prepare("select * from aolympiqueathlete where nom=:nom");
-query.bindValue(":nom", nom);
-
-return model;
-}*/
 
 
 

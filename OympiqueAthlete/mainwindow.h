@@ -53,7 +53,6 @@ private slots:
 
 
 
-
 private:
     Ui::MainWindow *ui;
     athletesOP A;
