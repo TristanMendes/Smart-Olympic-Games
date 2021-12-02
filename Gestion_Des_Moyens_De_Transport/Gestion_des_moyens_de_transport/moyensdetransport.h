@@ -35,8 +35,9 @@ public:
 
        bool supprimer(int);
        bool modifier(int);
-       bool modifier_billet (int,int);
+
        bool modifie_billet(int,int,int);
+       bool verifier_id(int);
 
        int recherche_nbr_billet(int);
               bool modifier_QR_code (int,int,int);
@@ -51,7 +52,6 @@ public:
               QSqlQueryModel * choix_moyen(int );
               QSqlQueryModel* afficher_billet();
               QSqlQueryModel* rechercher_id(int);
-              void statistique(QVector<double>* ticks,QVector<QString> *labels);
 
 
 

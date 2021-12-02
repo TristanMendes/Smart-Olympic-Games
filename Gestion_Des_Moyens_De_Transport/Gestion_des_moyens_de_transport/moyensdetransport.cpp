@@ -281,24 +281,6 @@ QSqlQueryModel *  MoyensDeTransport::rechercher_id(int id)
 
  }
 
-/*bool MoyensDeTransport::modifier_billet (int idd,int nbr_billets)
-{
-    QSqlQuery query,qry;
-    QString res=QString::number(idd);
-   // qry.prepare("select nbr_billet from Moyens_De_Transport where id_moyen=:id");
-    //qry.bindValue(":nbr_billets",nbr_billets);
-    //qry.exec();
-    int somme=nbr_billets+1;
-    query.prepare("Update Moyens_De_Transport set id_moyen = :id , nbr_billet=:nbr_billet  where id_moyen = :id ");
-
-    query.bindValue(":id", res);
-    query.bindValue(":nbr_billet", somme);
-
-
-    return    query.exec();
-}*/
-
-
 
 
 
@@ -345,26 +327,7 @@ bool MoyensDeTransport::recherche_id(int idd)
 }
 
 
-/*int MoyensDeTransport::recherche_nbr_billet(int idd)
-{   int nb=0;
-    QSqlQuery qry;
-    qry.prepare("select nbr_billet from Moyens_De_Transport where id_moyen=:idd");
-    qry.bindValue(":id",idd);
 
-
-    if(qry.exec())
-        {
-    while(qry.next())
-        {
-            nb = qry.value(1).toInt();  //Récupère le résultat de la requête
-            qDebug() << nb;
-
-
-
-
-
-
-}} return nb;} */
 
 int MoyensDeTransport::recherche_nbr_billet(int id_moyen)
 {
@@ -384,6 +347,7 @@ int MoyensDeTransport::recherche_nbr_billet(int id_moyen)
 
 
             return n;
+
 
 
 
@@ -417,16 +381,23 @@ bool MoyensDeTransport::modifie_billet (int idd, int nbr,int nb)
 
 
 
-void  MoyensDeTransport::statistique(QVector<double>* ticks,QVector<QString> *labels)
-{
-    QSqlQuery q;
-    int i=0;
-    q.exec("select CAPACITE from Moyens_De_Transport");
-    while (q.next())
-    {
-        QString nom_moyen= q.value(0).toString();
-        i++;
-        *ticks<<i;
-        *labels <<nom_moyen;
-    }
-}
+
+
+ bool MoyensDeTransport::verifier_id(int idd)
+
+ {
+
+     QSqlQuery query;
+         QString n;
+         QString  num = QString::number(idd);
+                 query.exec("SELECT idd from departement");
+                 while (query.next())
+                 {
+                     n=query.value("idd").toString();
+                     if (n==num)
+                     {
+                         return true;
+                     }
+                 }
+         return false;
+ }

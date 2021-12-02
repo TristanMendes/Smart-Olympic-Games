@@ -13,6 +13,8 @@
 
 
 
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -70,20 +72,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->plot->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);  //points
     ui->plot->graph(0)->setLineStyle(QCPGraph::lsLine);   // line
-   /* ui->plot->xAxis->setRange(0,1000);
-    ui->plot->yAxis->setRange(0,1000);
-    ui->plot->setInteractions(QCP::iRangeDrag |QCP::iRangeZoom|QCP::iSelectPlottables);*/
 
 
      ui->customPlot->replot();
-     /*int size=10;
-     QVector<double> x(size),y (size);
-     for(int i=0; i<size; i++)
-           {
-             x[i]=i;
-             y[i]=i;
 
-           }*/
 
 
 
@@ -180,9 +172,10 @@ void MainWindow::on_B_Ajouter_clicked()
 
 
                 bool result=M.supprimer(id);
+                bool test=M.verifier_id(id);
 
 
-                     if((result))
+                     if((result)&&(test==true))
                      {
 
                    QMessageBox::information(nullptr, QObject::tr("Supprimer un moyen de transport"),
@@ -197,9 +190,7 @@ void MainWindow::on_B_Ajouter_clicked()
 
 
 
-               /*QMessageBox::critical(nullptr, QObject::tr("Supprimer un moyen de transport"),
-                               QObject::tr("Moyen inexistant!.\n"
-                                           "Click Cancel to exit."), QMessageBox::Cancel);*/
+
                 ui->table_moyens->setModel(M.afficher());
 
 
