@@ -7,6 +7,10 @@
 #include <QDialog>
 #include <QFile>
 #include<QTextStream>
+#include <arduino.h>
+#include <QtSerialPort/QSerialPort>
+#include <QtSerialPort/QSerialPortInfo>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,9 +45,23 @@ private slots:
 
     void on_bouton_excel_clicked();
 
+    void on_bouton_URL_clicked();
+
+    void update_label();   // slot permettant la mise à jour du label état de la lampe 1,
+    // ce slot est lancé à chaque réception d'un message de Arduino
+
+
+
+
+
 private:
     Ui::MainWindow *ui;
     athletesOP A;
+
+
+    QByteArray data; // variable contenant les données reçues
+
+    Arduino a; // objet temporaire
 
 };
 #endif // MAINWINDOW_H

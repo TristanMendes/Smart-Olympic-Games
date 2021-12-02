@@ -53,6 +53,9 @@ public:
     QSqlQueryModel* trier_specialite();
     QSqlQueryModel* stat();
 
+    QString size();
+
+
 
 };
 

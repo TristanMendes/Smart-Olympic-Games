@@ -18,7 +18,9 @@
 #include <QPdfWriter>
 #include <QDesktopServices>
 #include <QUrl>
-
+#include <QtCharts/QChartView>
+#include <QPieSlice>
+#include <QPieSeries>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,6 +31,16 @@ ui->lineEdit_ID_3->setValidator(new QIntValidator(0, 99999, this));
 ui->lineEdit_supprimerath->setValidator(new QIntValidator(0, 99999, this));
 ui->lineEdit_Age_3->setValidator(new QIntValidator(0, 9999, this));
 ui->table_athletes_2->setModel(A.afficher());
+int ret=a.connect_arduino(); // lancer la connexion à arduino
+switch(ret){
+case(0):qDebug()<< "arduino is available and connected to : "<< a.getarduino_port_name();
+    break;
+case(1):qDebug() << "arduino is available but not connected to :" <<a.getarduino_port_name();
+   break;
+case(-1):qDebug() << "arduino is not available";
+}
+ QObject::connect(a.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+ //le slot update_label suite à la reception du signal readyRead (reception des données).
 }
 
 MainWindow::~MainWindow()
@@ -311,8 +323,30 @@ void MainWindow::on_bouton_excel_clicked()
                        data << strList.join(";") + "\n";
                    }
                    file.close();
-                   QMessageBox::information(nullptr, QObject::tr("Export excel"),
-                                             QObject::tr("Export avec succes .\n"
+                   QMessageBox::information(nullptr, QObject::tr("Exporter le fichier excel"),
+                                             QObject::tr("Fichier Générer avec succès .\n"
                                                          "Click OK to exit."), QMessageBox::Ok);
                }
 }
+
+void MainWindow::on_bouton_URL_clicked()
+{
+    QString link="http://www.google.com";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void MainWindow::update_label()
+{
+    data=a.read_from_arduino();
+
+    if(data=="1")
+
+        ui->label_3->setText("ON"); // si les données reçues de arduino via la liaison série sont égales à 1
+    // alors afficher ON
+
+    else if (data=="0")
+
+        ui->label_3->setText("OFF");   // si les données reçues de arduino via la liaison série sont égales à 0
+     //alors afficher ON
+}
+

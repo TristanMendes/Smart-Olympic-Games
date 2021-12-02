@@ -14,7 +14,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -79,9 +81,14 @@ public:
     QPushButton *bouton_rechercherath;
     QPushButton *bouton_PDF;
     QPushButton *bouton_excel;
+    QPushButton *bouton_URL;
+    QLabel *update_label;
     QTableView *table_athletes_2;
     QLabel *label_6;
     QWidget *tab_14;
+    QFrame *horizontalFrame;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -161,7 +168,7 @@ public:
         tab_11->setObjectName(QStringLiteral("tab_11"));
         lineEdit_ID_3 = new QLineEdit(tab_11);
         lineEdit_ID_3->setObjectName(QStringLiteral("lineEdit_ID_3"));
-        lineEdit_ID_3->setGeometry(QRect(142, 19, 121, 31));
+        lineEdit_ID_3->setGeometry(QRect(140, 30, 121, 31));
         lineEdit_ID_3->setStyleSheet(QLatin1String("color:black;\n"
 "border-color: rgb(222, 255, 52);\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -364,10 +371,10 @@ public:
         tab_12->setObjectName(QStringLiteral("tab_12"));
         groupBox_2 = new QGroupBox(tab_12);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(-40, 40, 741, 211));
+        groupBox_2->setGeometry(QRect(20, 30, 741, 211));
         label_42 = new QLabel(groupBox_2);
         label_42->setObjectName(QStringLiteral("label_42"));
-        label_42->setGeometry(QRect(30, 30, 151, 20));
+        label_42->setGeometry(QRect(100, 40, 111, 20));
         label_42->setStyleSheet(QLatin1String("font: 75 10pt \"MS Shell Dlg 2\";\n"
 "font: 18pt \"MS Shell Dlg 2\";"));
         lineEdit_supprimerath = new QLineEdit(groupBox_2);
@@ -380,7 +387,7 @@ public:
 "border-radius: 10px"));
         boutton_supprimerath = new QPushButton(groupBox_2);
         boutton_supprimerath->setObjectName(QStringLiteral("boutton_supprimerath"));
-        boutton_supprimerath->setGeometry(QRect(500, 30, 111, 31));
+        boutton_supprimerath->setGeometry(QRect(500, 40, 111, 21));
         boutton_supprimerath->setStyleSheet(QLatin1String("color:black;\n"
 "border-color: rgb(222, 255, 52);\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -391,7 +398,7 @@ public:
 ""));
         comboBox_trierath = new QComboBox(groupBox_2);
         comboBox_trierath->setObjectName(QStringLiteral("comboBox_trierath"));
-        comboBox_trierath->setGeometry(QRect(130, 91, 131, 31));
+        comboBox_trierath->setGeometry(QRect(170, 100, 131, 31));
         comboBox_trierath->setStyleSheet(QLatin1String("color:black;\n"
 "font: 75 14pt \"MS Shell Dlg 2\";\n"
 "border-style:outset;\n"
@@ -399,7 +406,7 @@ public:
 "border-radius: 10px"));
         label_32 = new QLabel(groupBox_2);
         label_32->setObjectName(QStringLiteral("label_32"));
-        label_32->setGeometry(QRect(30, 100, 81, 20));
+        label_32->setGeometry(QRect(100, 110, 61, 20));
         label_32->setStyleSheet(QLatin1String("font: 75 10pt \"MS Shell Dlg 2\";\n"
 "font: 18pt \"MS Shell Dlg 2\";"));
         lineEdit_rechercher = new QLineEdit(groupBox_2);
@@ -411,7 +418,7 @@ public:
 "border-radius: 10px"));
         bouton_rechercherath = new QPushButton(groupBox_2);
         bouton_rechercherath->setObjectName(QStringLiteral("bouton_rechercherath"));
-        bouton_rechercherath->setGeometry(QRect(344, 92, 131, 41));
+        bouton_rechercherath->setGeometry(QRect(344, 102, 131, 31));
         bouton_rechercherath->setStyleSheet(QLatin1String("color:black;\n"
 "border-color: rgb(222, 255, 52);\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -422,7 +429,7 @@ public:
 ""));
         bouton_PDF = new QPushButton(groupBox_2);
         bouton_PDF->setObjectName(QStringLiteral("bouton_PDF"));
-        bouton_PDF->setGeometry(QRect(340, 140, 131, 41));
+        bouton_PDF->setGeometry(QRect(350, 140, 121, 31));
         bouton_PDF->setStyleSheet(QLatin1String("color:black;\n"
 "border-color: rgb(222, 255, 52);\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -433,7 +440,7 @@ public:
 ""));
         bouton_excel = new QPushButton(groupBox_2);
         bouton_excel->setObjectName(QStringLiteral("bouton_excel"));
-        bouton_excel->setGeometry(QRect(130, 140, 131, 41));
+        bouton_excel->setGeometry(QRect(170, 140, 121, 21));
         bouton_excel->setStyleSheet(QLatin1String("color:black;\n"
 "border-color: rgb(222, 255, 52);\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -442,9 +449,23 @@ public:
 "border-width: 2px;\n"
 "border-radius: 10px\n"
 ""));
+        bouton_URL = new QPushButton(groupBox_2);
+        bouton_URL->setObjectName(QStringLiteral("bouton_URL"));
+        bouton_URL->setGeometry(QRect(530, 150, 101, 21));
+        bouton_URL->setStyleSheet(QLatin1String("color:black;\n"
+"border-color: rgb(222, 255, 52);\n"
+"background-color: rgb(255, 255, 255);\n"
+"font: 75 16pt \"MS Shell Dlg 2\";\n"
+"border-style:outset;\n"
+"border-width: 2px;\n"
+"border-radius: 10px\n"
+""));
+        update_label = new QLabel(groupBox_2);
+        update_label->setObjectName(QStringLiteral("update_label"));
+        update_label->setGeometry(QRect(20, 180, 91, 16));
         table_athletes_2 = new QTableView(tab_12);
         table_athletes_2->setObjectName(QStringLiteral("table_athletes_2"));
-        table_athletes_2->setGeometry(QRect(0, 260, 761, 181));
+        table_athletes_2->setGeometry(QRect(0, 260, 761, 221));
         label_6 = new QLabel(tab_12);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setGeometry(QRect(-10, -100, 811, 641));
@@ -455,6 +476,14 @@ public:
         table_athletes_2->raise();
         tab_14 = new QWidget();
         tab_14->setObjectName(QStringLiteral("tab_14"));
+        horizontalFrame = new QFrame(tab_14);
+        horizontalFrame->setObjectName(QStringLiteral("horizontalFrame"));
+        horizontalFrame->setGeometry(QRect(20, 20, 721, 361));
+        horizontalLayout = new QHBoxLayout(horizontalFrame);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        pushButton = new QPushButton(tab_14);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(590, 430, 111, 23));
         tabWidget_2->addTab(tab_14, QString());
         tabWidget->addTab(tab_10, QString());
         MainWindow->setCentralWidget(centralwidget);
@@ -510,6 +539,12 @@ public:
         comboBox_heure->clear();
         comboBox_heure->insertItems(0, QStringList()
          << QString()
+         << QApplication::translate("MainWindow", "09:00", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "09:30", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "10:00", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "10:30", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "11:00", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "11:30", Q_NULLPTR)
          << QApplication::translate("MainWindow", "13:30", Q_NULLPTR)
          << QApplication::translate("MainWindow", "14:00", Q_NULLPTR)
          << QApplication::translate("MainWindow", "14:30", Q_NULLPTR)
@@ -533,9 +568,12 @@ public:
         label_32->setText(QApplication::translate("MainWindow", "Trier", Q_NULLPTR));
         bouton_rechercherath->setText(QApplication::translate("MainWindow", "Rechercher", Q_NULLPTR));
         bouton_PDF->setText(QApplication::translate("MainWindow", "exporter pdf", Q_NULLPTR));
-        bouton_excel->setText(QApplication::translate("MainWindow", "EXCEL", Q_NULLPTR));
+        bouton_excel->setText(QApplication::translate("MainWindow", "excel", Q_NULLPTR));
+        bouton_URL->setText(QApplication::translate("MainWindow", "internet", Q_NULLPTR));
+        update_label->setText(QApplication::translate("MainWindow", "text ", Q_NULLPTR));
         label_6->setText(QString());
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_12), QApplication::translate("MainWindow", "Afficher", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow", "STATISTIC", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_14), QApplication::translate("MainWindow", "OPTIONS", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_10), QApplication::translate("MainWindow", "Gestion des Athl\303\250tes", Q_NULLPTR));
     } // retranslateUi
