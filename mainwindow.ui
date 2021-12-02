@@ -27,7 +27,7 @@
      <string notr="true">background-image: url(:/Projet C++/Maquettes/image_fond.jpg);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -1549,98 +1549,6 @@
           <layout class="QGridLayout" name="gridlayout_stat_3"/>
          </widget>
         </widget>
-        <widget class="QWidget" name="tab_24">
-         <attribute name="title">
-          <string>essai</string>
-         </attribute>
-         <widget class="QCustomPlot" name="plot" native="true">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>70</y>
-            <width>421</width>
-            <height>311</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QCustomPlot" name="customPlot" native="true">
-          <property name="geometry">
-           <rect>
-            <x>480</x>
-            <y>70</y>
-            <width>381</width>
-            <height>311</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="pb_stat">
-          <property name="geometry">
-           <rect>
-            <x>590</x>
-            <y>40</y>
-            <width>75</width>
-            <height>23</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Valider</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_35">
-          <property name="geometry">
-           <rect>
-            <x>260</x>
-            <y>40</y>
-            <width>31</width>
-            <height>20</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Selon</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="choix_stat">
-          <property name="geometry">
-           <rect>
-            <x>320</x>
-            <y>40</y>
-            <width>201</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>Nom</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Type</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Etat</string>
-           </property>
-          </item>
-         </widget>
-         <widget class="QLabel" name="label_34">
-          <property name="geometry">
-           <rect>
-            <x>400</x>
-            <y>0</y>
-            <width>101</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font: 15pt &quot;Calibri&quot;;</string>
-          </property>
-          <property name="text">
-           <string>Statistiques </string>
-          </property>
-         </widget>
-        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_7">
@@ -2052,14 +1960,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QCustomPlot</class>
-   <extends>QWidget</extends>
-   <header>qcustomplot.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
