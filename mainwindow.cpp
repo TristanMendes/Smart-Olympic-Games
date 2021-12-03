@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "gestion_examens_medicaux.h"
 #include "gestion_des_moyens_de_transport.h"
+#include "gestion_service_financier.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -26,3 +27,9 @@ e.exec();}
 void MainWindow::on_pushButton_clicked()
 {gestion_des_moyens_de_transport m;
 m.exec();}
+
+void MainWindow::on_pushbutton_service_financier_clicked()
+{
+    gestion_service_financier gf;
+    gf.exec();
+}

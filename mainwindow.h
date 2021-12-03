@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushbutton_service_financier_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
