@@ -16,6 +16,7 @@
 
           bool ajouter();
         QSqlQueryModel* afficher();
+        bool supprimer(int);
  int gain()  ;
       private:
           int chambre_reserve,periode,prix;

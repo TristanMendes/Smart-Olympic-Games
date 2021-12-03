@@ -63,6 +63,10 @@ void on_table_periode_activated(const QModelIndex &index);
 
 void on_pb_reserve_clicked();
 
+void on_pb_supp_3_clicked();
+
+void on_table_payment_activated(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     Hebergement H;

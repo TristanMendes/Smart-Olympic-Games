@@ -22,7 +22,7 @@ void payment::setperiode(int periode){this->periode=periode;}
 void payment::setprix(int prix){this->prix=prix;}
 bool payment::ajouter()
 {
-    QString chambre_reserve_string=QString::number(chambre_reserve);
+    //QString chambre_reserve_string=QString::number(chambre_reserve);
     QSqlQuery query;
 
           query.prepare("INSERT INTO payment (chambre, periode, prix_chambre) "
@@ -48,19 +48,13 @@ QSqlQueryModel* payment::afficher()
 
   return model;
 }
-int payment::gain()
-{
-    QSqlQueryModel* model=new QSqlQueryModel();
-QSqlQuery query ;
-int total=0 ;
-total=query.prepare("select periode * prix_chambre * chambre from payment ") ;
-
-   return total ;
 
 
+bool  payment::supprimer(int prix)
+{  QSqlQuery query;
+    query.prepare("delete from payment where prix_chambre=:prix_chambre");
+  query.bindValue(0, prix);
+return query.exec();
 }
-
-
-
 
 

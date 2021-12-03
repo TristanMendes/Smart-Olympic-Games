@@ -419,8 +419,7 @@ void MainWindow::on_pb_reserve_clicked()
         int chambre_reserve=ui->la_nbchambre->text().toInt();
        int periode=ui->le_periode->text().toInt();
         int prix=ui->la_prix->text().toInt();
-int g ;
-//int test2=p.gain() ;
+
 int a=ui->la_prix->text().toInt() ;
 int b=ui->la_nbchambre->text().toInt() ;
 int c=ui->le_periode->text().toInt() ;
@@ -433,7 +432,7 @@ ui->total->setText(test22) ;
     bool test=p.ajouter();
     if(test){
         QMessageBox::information(nullptr,QObject::tr("payment"),QObject::tr("payment ajouté\n" "click ok to exit"),QMessageBox::Ok);
-       // ui->le_id_2->setText("");//bech ba3ed mankamel l ajout yarja3 a 0
+        ui->la_nbchambre->setText("");//bech ba3ed mankamel l ajout yarja3 a 0
         ui->table_payment->setModel(p.afficher());//actualisation
 
 
@@ -454,6 +453,50 @@ ui->total->setText(test22) ;
 
 
 
+
+    }
+}
+
+
+void MainWindow::on_pb_supp_3_clicked()
+{
+    payment P1; P1.setprix(ui->prix_supp->text().toInt());
+    bool test=P1.supprimer(P1.getprix());
+    if (test)
+    {
+      QMessageBox::information(nullptr,QObject::tr("Suppression avec succes"),QObject::tr("SUCCES"),QMessageBox::Ok) ;
+    }else
+
+        QMessageBox::critical(nullptr, QObject::tr("ERREUR"),
+                    QObject::tr("Echec de suppression.\n"
+                        "Click Cancel to exit."), QMessageBox::Cancel);
+ui->table_payment->setModel(p.afficher());
+}
+
+
+void MainWindow::on_table_payment_activated(const QModelIndex &index)
+{
+    {
+        QSqlQuery query ;
+            QString val=ui->table_payment->model()->data(index).toString();
+            query.prepare("SELECT * from payment where prix_chambre=:prix_chambre ");
+
+            query.bindValue(":prix_chambre",val);
+            if(query.exec())
+            {
+                while(query.next())
+                {
+
+                    ui->prix_supp->setText(query.value(2).toString());
+
+                }
+            }
+            else
+            {
+                    QMessageBox::critical(nullptr, QObject::tr("Transferer données"),
+                                QObject::tr("Erreur !.\n"
+                                            "Click Cancel to exit."), QMessageBox::Cancel);
+            }
 
     }
 }
