@@ -1543,11 +1543,6 @@
           <string>Identifiant</string>
          </property>
         </item>
-        <item>
-         <property name="text">
-          <string>Nouvel élément</string>
-         </property>
-        </item>
        </widget>
        <widget class="QPushButton" name="pb_annuler_agent">
         <property name="geometry">
@@ -1591,11 +1586,6 @@
         <item>
          <property name="text">
           <string>Identifiant</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nouvel élément</string>
          </property>
         </item>
        </widget>

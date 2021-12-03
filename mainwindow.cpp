@@ -3,6 +3,7 @@
 #include "stade.h"
 #include "agent.h"
 #include "fan.h"
+#include "arduino.h"
 #include <QMessageBox>
 #include <QIntValidator>
 #include <QDebug>
@@ -34,14 +35,21 @@ ui->tab_fan->setModel(F.afficher_fan());
 ui->tab_affectation->setModel(Aff.afficher_aff());
 ui->qw_map->setSource(QUrl(QStringLiteral("qrc:/map.qml")));
 ui->qw_map->show();
-
-
 auto obj = ui-> qw_map->rootObject();
 connect(this,SIGNAL(setCenter(Qvariant,Qvariant)), obj, SLOT(setCenter(Qvarian,Qvariant)));
 
 emit setCenter(25.000,50.000);
 
-
+int ret=Ar.connect_arduino(); // lancer la connexion à arduino
+         switch(ret)
+         {
+         case(0):qDebug()<< "arduino is available and connected to : "<< Ar.getarduino_port_name();
+             break;
+         case(1):qDebug() << "arduino is available but not connected to :" <<Ar.getarduino_port_name();
+            break;
+         case(-1):qDebug() << "arduino is not available";
+         }
+          QObject::connect(Ar.getserial(),SIGNAL(readyRead()),this,SLOT(verification())); // permet de lancer
 }
 
 MainWindow::~MainWindow()
@@ -535,7 +543,7 @@ void MainWindow::on_lineEditRechercheFan_textChanged(const QString &arg1)
                     ui->tab_fan->setModel(F.afficher_fan());
 }
 
-void MainWindow::on_valabiliteFan_clicked()
+/*void MainWindow::on_valabiliteFan_clicked()
 {
     QString idFan=ui->lineEditValabiliteFan->text();
     Fan fan=F.valabiliteFan(idFan);
@@ -547,7 +555,7 @@ void MainWindow::on_valabiliteFan_clicked()
 
 
         QMessageBox::information(this, tr("Affectation"),str,QMessageBox::Ok);
-
+      //  ok=true  ;
         }
 
 
@@ -555,7 +563,73 @@ void MainWindow::on_valabiliteFan_clicked()
         QMessageBox::critical(nullptr,QObject::tr("Non trouve"),
           QObject::tr("Fan non valable."), QMessageBox::Ok);
 
+}*/
 
+void MainWindow::verification()
+{
+   // A.write_to_arduino("2");//SI ON A DEJA OUVERT UN MESSAGE BOX
+
+    data=Ar.read_from_arduino();
+qDebug()<<data;
+QThread::sleep(2);
+ int i=1 ;
+    if(data=="3")
+    {
+        QString idFan=ui->lineEditValabiliteFan->text();
+        Fan fan=F.valabiliteFan(idFan);
+        if(fan.getid_fan()!=0)
+
+             {
+            i=1 ;
+            QString test="";
+            QString str = " Fan valable \n ID Fan :" +QString::number(fan.getid_fan())+" \n Nom Fan : "+fan.getnom_fan()+ "\n Prenom Fan : "+fan.getprenom_fan()+" \n Nationalite Fan : "+fan.getnationalite_fan();
+
+     QMessageBox::information(this, tr("Affectation"),str,QMessageBox::Ok);
+        }/*else
+        {
+            QMessageBox::information(this, tr("erreur"),"erreur",QMessageBox::Ok);
+
+        }*/
+  //  A.write_to_arduino("0");//INDICATION DE L'OUVERTURE DU MESSAGE BOX
+    QMessageBox mbox;
+    if (fan.getid_fan()!=0)
+    {
+    mbox.setText("VERIFICATION");
+    mbox.setInformativeText("ticket valable : VOULEZ VOUS OUVRIR LE PORTAIL ?");
+    QPushButton *yesbtn = mbox.addButton(tr("Ouvrir"), QMessageBox::AcceptRole);
+    QPushButton *nobtn = mbox.addButton(tr("Refuser"), QMessageBox::RejectRole);
+    mbox.addButton(yesbtn, QMessageBox::AcceptRole);
+    mbox.addButton(nobtn, QMessageBox::RejectRole);
+
+
+
+    mbox.setIcon(QMessageBox::Warning);
+
+    mbox.exec();
+
+
+    if (mbox.clickedButton() == yesbtn) {
+
+        Ar.write_to_arduino("1");//POUR OUVIRIR LE PORTAIL
+        QMessageBox::information(this, QObject::tr("Appuyer sur cancel pour quitter."),
+                         QObject::tr("Portail Ouvert  !"), QMessageBox::Cancel);
+
+    } else if (mbox.clickedButton() == nobtn) {
+        QMessageBox::warning(this, QObject::tr("Appuyer sur cancel pour quitter."),
+                         QObject::tr("Portail fermé !"), QMessageBox::Cancel);
+
+    }
+}else
+         {
+        QMessageBox::warning(this, QObject::tr("."),
+                         QObject::tr("ticket non valable :PORTE FERME "), QMessageBox::Cancel);
+        QPushButton *nobtn = mbox.addButton(tr("Refuser"), QMessageBox::RejectRole);
+        mbox.addButton(nobtn, QMessageBox::RejectRole);
+    }
+
+    }
 
 
 }
+
+

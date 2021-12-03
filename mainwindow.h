@@ -4,6 +4,7 @@
 #include "agent.h"
 #include "fan.h"
 #include "affectation.h"
+#include "arduino.h"
 #include <QMainWindow>
 #include <QPainter>
 #include<QtGui>
@@ -88,7 +89,8 @@ private slots:
 
     void on_lineEditRechercheFan_textChanged(const QString &arg1);
 
-    void on_valabiliteFan_clicked();
+   // void on_valabiliteFan_clicked();
+void verification();
 
 private:
     Ui::MainWindow *ui;
@@ -96,6 +98,8 @@ private:
     Agent A ;
     Fan F;
     Affectation Aff;
+    QByteArray data ; //variable contenant les données reçu
+    arduino Ar;
 signals:
     void setCenter(QVariant,QVariant);
 

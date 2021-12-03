@@ -2,6 +2,7 @@ CONFIG +=console
 QT       += core gui
 QT += network
 QT += core gui charts
+QT +=serialport
 
 
 
@@ -26,6 +27,7 @@ SOURCES += \
     Connexion.cpp \
     affectation.cpp \
     agent.cpp \
+    arduino.cpp \
     fan.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -35,6 +37,7 @@ HEADERS += \
     Connexion.h \
     affectation.h \
     agent.h \
+    arduino.h \
     fan.h \
     mainwindow.h \
     stade.h
