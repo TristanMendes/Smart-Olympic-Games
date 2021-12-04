@@ -26,8 +26,10 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
 SOURCES += \
     connexion.cpp \
     examen_medical.cpp \
+    factures.cpp \
     gestion_des_moyens_de_transport.cpp \
     gestion_examens_medicaux.cpp \
+    gestion_service_financier.cpp \
     main.cpp \
     mainwindow.cpp \
     moyensdetransport.cpp \
@@ -37,8 +39,10 @@ SOURCES += \
 HEADERS += \
     connexion.h \
     examen_medical.h \
+    factures.h \
     gestion_des_moyens_de_transport.h \
     gestion_examens_medicaux.h \
+    gestion_service_financier.h \
     mainwindow.h \
     moyensdetransport.h \
     qcustomplot.h \
@@ -47,6 +51,7 @@ HEADERS += \
 FORMS += \
     gestion_des_moyens_de_transport.ui \
     gestion_examens_medicaux.ui \
+    gestion_service_financier.ui \
     mainwindow.ui
 
 # Default rules for deployment.
