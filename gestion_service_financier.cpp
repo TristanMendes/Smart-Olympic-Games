@@ -13,6 +13,8 @@ gestion_service_financier::gestion_service_financier(QWidget *parent) :
 {
     QString st = facAff.get_Statut();
     ui->setupUi(this);
+    setWindowTitle("Gestion des factures");
+    setWindowIcon(QIcon(":/icone_app.png"));
     ui->tableView_Afficher->setModel(facAff.consulterFacture());
     ui->tableView_Payer->setModel(facAff.afficherFacturesNonPayee());
 }

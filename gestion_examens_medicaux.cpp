@@ -22,6 +22,8 @@ gestion_examens_medicaux::gestion_examens_medicaux(QWidget *parent) :
     ui(new Ui::gestion_examens_medicaux)
 {
     ui->setupUi(this);
+    setWindowTitle("Gestion des examens médicaux");
+    setWindowIcon(QIcon(":/icone_app.png"));
     ui->le_id->setValidator(new QIntValidator(0,99999999,this));
     ui->le_id_supp->setValidator(new QIntValidator(0,99999999,this));
     ui->le_id_modif->setValidator(new QIntValidator(0,99999999,this));

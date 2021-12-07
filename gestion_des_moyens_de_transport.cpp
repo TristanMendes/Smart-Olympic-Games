@@ -15,6 +15,10 @@ gestion_des_moyens_de_transport::gestion_des_moyens_de_transport(QWidget *parent
     QDialog(parent),
     ui(new Ui::gestion_des_moyens_de_transport)
 {ui->setupUi(this);
+setWindowTitle("Gestion des moyens de transport");
+setWindowIcon(QIcon(":/icone_app.png"));
+
+
 QBarSet *set0=new QBarSet("Voiture");
 QBarSet *set1=new QBarSet("Train");
 QBarSet *set2=new QBarSet("Avion");

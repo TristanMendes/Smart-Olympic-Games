@@ -23,9 +23,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-color: rgb(255, 0, 0);
-background-color: rgb(255, 255, 255);
-</string>
+    <string notr="true">background-image: url(:/image_fond.jpg);</string>
    </property>
    <property name="currentIndex">
     <number>1</number>
@@ -45,11 +43,12 @@ background-color: rgb(255, 255, 255);
      </property>
      <property name="styleSheet">
       <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
-background-image: url(:/fond.jpg);
+background-image: url(:/image_fond.jpg);
+
 </string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
@@ -859,7 +858,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
-background-image: url(:/fond.jpg);</string>
+background-image: url(:/image_fond.jpg);</string>
      </property>
      <property name="currentIndex">
       <number>6</number>
@@ -878,8 +877,7 @@ background-image: url(:/fond.jpg);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);
-background-image: url(:/fond.jpg);</string>
+        <string notr="true">background-image: url(:/image_fond.jpg);</string>
        </property>
        <property name="title">
         <string>Choix</string>
@@ -1757,7 +1755,7 @@ p, li { white-space: pre-wrap; }
      </widget>
      <widget class="QWidget" name="tab_6">
       <attribute name="title">
-       <string>stats</string>
+       <string>Statistiques</string>
       </attribute>
       <widget class="QCustomPlot" name="plot" native="true">
        <property name="geometry">

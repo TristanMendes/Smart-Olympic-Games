@@ -6,52 +6,208 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1022</width>
-    <height>600</height>
+    <width>700</width>
+    <height>498</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pb_gestion_examens_medicaux">
+   <widget class="QTableView" name="utilisateurs">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>110</y>
-      <width>181</width>
-      <height>41</height>
+      <x>70</x>
+      <y>130</y>
+      <width>256</width>
+      <height>192</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>Gestion des examens medicaux</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>180</y>
-      <width>221</width>
-      <height>41</height>
+      <x>0</x>
+      <y>0</y>
+      <width>691</width>
+      <height>461</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Gestion des moyens de transport</string>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/image_fond.jpg);</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushbutton_service_financier">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>260</y>
-      <width>221</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Gestio Service Financier</string>
-    </property>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>310</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mot de passe oublié ?</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>200</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mot de passe</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>30</y>
+       <width>271</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 30pt &quot;Calibri&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Connexion</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>260</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Se connecter</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="L_connec_login">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>140</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>140</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="L_connec_mdp">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>190</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gestion_stades">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>40</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gestion des stades</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_gestion_examens_medicaux">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>130</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gestion des examens medicaux</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gestion_hebergements">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>190</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gestion des hebergements</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gestion_factures">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>260</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gestion des factures</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_gestion_moyens_transport">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>330</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gestion des moyens de transport</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="gestion_athletes">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>380</y>
+       <width>181</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Gestion des athlétes</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -59,16 +215,16 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1022</width>
+     <width>700</width>
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuSmart_Olympic_Games">
+   <widget class="QMenu" name="menuAcceuil">
     <property name="title">
-     <string>Smart Olympic Games</string>
+     <string>Acceuil</string>
     </property>
    </widget>
-   <addaction name="menuSmart_Olympic_Games"/>
+   <addaction name="menuAcceuil"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

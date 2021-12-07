@@ -17,12 +17,16 @@ public:
 
 private slots:
     void on_pb_gestion_examens_medicaux_clicked();
+    void on_pb_gestion_moyens_transport_clicked();
+    void on_gestion_athletes_clicked();
+    void on_gestion_factures_clicked();
 
-    void on_pushButton_clicked();
+    void on_gestion_stades_clicked();
 
-    void on_pushbutton_service_financier_clicked();
+    void on_gestion_hebergements_clicked();
 
 private:
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
+
